@@ -30,3 +30,54 @@ body {
 .navbar .brand img {
   vertical-align: top;
 }
+hr {
+  margin-bottom: 10px;
+}
+.btn-xlarge {
+  width: 226px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: normal;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/** footer */
+#footer {
+  font-size: 13px;
+  color:#999;
+}
+#footer a {
+  border-bottom: 1px dotted #aaa;
+  color:#999;
+  text-decoration: none;
+}
+#footer .weibo a {
+  border-bottom: none;
+  font-weight: bold;
+}
+#footer .weibo img {
+  vertical-align: top;
+  padding-top: 4px;
+}
+
+/** home */
+.home {
+  padding-top: 30px;
+}
+.home .left {
+  text-align: right;
+}
+.home h2 {
+  margin-top: 25px;
+}
+.home .right ul {
+  list-style-type: none;
+  margin:20px 0;
+}
+.home .right ul li {
+  font-size: 25px;
+  line-height: 36px;
+}

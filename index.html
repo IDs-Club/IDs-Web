@@ -53,15 +53,50 @@
   </div>
 
   <div class="container">
-
+	<div class="row-fluid home">
+	  <div class="span5 left">
+	    <img src="assets/img/smashing-mag.png" width="420" />
+	  </div>
+	  <div class="span7 right">
+		<p><a href="http://weibo.com/idsclub"><img src="assets/img/weibo.png" width="120"></a></p>
+		<h2>澳洲互联网精英设计师与开发者的聚会</h2>
+		<ul>
+		  <li><i class="icon-flag"></i> 风格低俗</li>
+		  <li><i class="icon-flag"></i> 内容山寨</li>
+		  <li><i class="icon-flag"></i> 作风粗暴</li>
+		  <li><i class="icon-flag"></i> 行事邪恶</il>
+		</ul>
+		<a class="btn btn-xlarge btn-primary" href="#">加入我们 <i class="icon-chevron-right"></i></a>
+	  </div>
+	</div>
   </div> <!-- /container -->
 </div>
+
+<hr />
+<footer id="footer">
+  <div class="container">
+    <div class="pull-left">
+      <a href="http://www.yoozi.com.au/" rel="tooltip" title="书友会成员游子澳洲团队作品">书友会精心制作</a> 
+      &copy; 2012 <a href="http://www.idsclub.org/">idsclub.org</a>
+    </div>
+    <div class="pull-right weibo">
+  	  <a href="http://weibo.com/idsclub"><img src="assets/img/weibo_16x16.png"> 我们在新浪微博</a>
+    </div>
+  </div>
+</footer>
+
 <script src="assets/js/jquery-1.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+// Tooltip on navbar
 $('.nav-pills li').tooltip({
 	selector: 'a[rel="tooltip"]',
 	placement: 'bottom'
+});
+// Tooltip on footer links
+$('#footer').tooltip({
+	selector: 'a[rel="tooltip"]',
+	placement: 'top'
 });
 </script>
 </body>

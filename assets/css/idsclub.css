@@ -84,3 +84,8 @@ hr {
   font-size: 25px;
   line-height: 36px;
 }
+
+/** about */
+.about h2 img {
+  vertical-align: top;
+}

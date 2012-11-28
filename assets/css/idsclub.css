@@ -31,7 +31,8 @@ body {
   vertical-align: top;
 }
 hr {
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .btn-xlarge {
   width: 226px;
@@ -48,6 +49,7 @@ hr {
 #footer {
   font-size: 13px;
   color:#999;
+  line-height: 24px;
 }
 #footer a {
   border-bottom: 1px dotted #aaa;
@@ -65,7 +67,8 @@ hr {
 
 /** home */
 .home {
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .home .left {
   text-align: right;

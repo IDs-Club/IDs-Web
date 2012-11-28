@@ -1,1 +1,1 @@
-it was an hour work ,  no time to optimize it . code is ugly and not restful , please make it better .,
+it was an hour work , coding is ugly and bit buggy , if you guys have time please optimize it .

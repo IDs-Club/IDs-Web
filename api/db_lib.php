@@ -49,18 +49,24 @@ class db
     $result = mysqli_query( $this->dbh, $query );
     return $result;
   }
+  
+  public function delete($query) {
+	 //echo '11111111111111' . $query;
+      mysqli_query($this->dbh,$query);
+  }
     
   // Add a row to any table
   public function insert($table,$fields,$values) {
     $query = 'INSERT INTO ' . $table . ' ( ' . $fields . ') VALUES (' . $values . ')';
-	//echo $query;
+    //echo $query;
     mysqli_query($this->dbh,$query);
   }
   
   // Update any row that matches a WHERE clause
-  public function update($table,$field_values,$where) {
+  public function update($table,$where,$field_values) {
     $query = 'UPDATE ' . $table . ' SET ' . $field_values . 
       ' WHERE ' . $where;
+	//echo $query;
     mysqli_query($this->dbh,$query);
   } 
  

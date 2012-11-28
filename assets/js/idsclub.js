@@ -6,6 +6,12 @@ yoozi.app = yoozi.app || {};
 
   "use strict"; // jshint ;_;
 
+  yoozi.app.qs = function(key){
+	key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // Escape RegEx control chars
+    var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+    return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+  };
+
   /**
    * Bootstrap for all pages
    *

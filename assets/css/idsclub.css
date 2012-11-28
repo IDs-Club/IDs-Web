@@ -89,3 +89,7 @@ hr {
 .about h2 img {
   vertical-align: top;
 }
+.about hr {
+  margin-top: -8px;
+  margin-bottom: 10px;
+}

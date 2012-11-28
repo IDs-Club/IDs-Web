@@ -45,6 +45,10 @@ hr {
   border-radius: 4px;
 }
 
+.highlight {
+  color:#FF9900;
+}
+
 /** footer */
 #footer {
   font-size: 13px;

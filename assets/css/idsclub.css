@@ -66,9 +66,9 @@ hr {
 }
 
 /** home */
-.home {
-  padding-top: 20px;
-  padding-bottom: 10px;
+.home,.about {
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 .home .left {
   text-align: right;

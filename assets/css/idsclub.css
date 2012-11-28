@@ -49,6 +49,9 @@ hr.bottom {
   border-radius: 4px;
 }
 
+#wtf {
+  width:300px;
+}
 .highlight {
   color:#FF9900;
 }

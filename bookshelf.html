@@ -38,11 +38,11 @@
         </a>
         <div class="nav-collapse collapse">
           <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
+            <li><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
             <li><a href="about.html" rel="tooltip" title="关于 IDs Club"><i class="icon-exclamation-sign"></i></a></li>
             <li class="active"><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="icon-book"></i></a></li>
             <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="icon-github"></i></a></li>
-            <li><a href="events.html" rel="tooltip" title="活动"><i class="icon-bullhorn"></i></a></li>
+            <li><a href="http://idsclub.diandian.com" rel="tooltip" title="活动"><i class="icon-bullhorn"></i></a></li>
             <li><a href="faq.html" rel="tooltip" title="问题"><i class="icon-question-sign"></i></a></li>
             <li><a href="contact.html" rel="tooltip" title="联系"><i class="icon-envelope"></i></a></li>
           </ul>
@@ -51,10 +51,31 @@
     </div>
   </div>
 
-  <div class="container">
-	<div class="row-fluid books">
-	  <h1>所有图书</h1>
-	  <div id="bookshelf"><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后</div>
+  <div class="container bookshelf">
+	<div class="row-fluid">
+	  <div class="span9">
+	    <h2><i class="icon-book"></i> <span id="title">所有图书</span></h2>
+	    <hr />
+	    <div class="row-fluid">
+	      <ol id="bookshelf" class="clearfix">
+		    <li style="list-style:none">
+		      <img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后
+		    </li>
+ 	      </ol>
+	    </div>
+	  </div>
+	  <aside class="span3" id="category">
+	  	<a class="btn btn-xlarge btn-primary" id="download" href="#"><i class="icon-download-alt"></i> 下载书友会 App</a>
+	  	<h3><i class="icon-filter"></i> 分类浏览</h3>
+	  	<ul id="cats">
+	  	  <li><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...</li>
+	  	</ul>
+	  	<h3><i class="icon-filter"></i> 感谢赞助商个人与单位</h3>
+	  	<ul id="thanks">
+	  	  <li><a href="http://classad.yoozi.com.au/" rel="tooltip" title="澳洲游子租房、买车、交朋友和找工作"><img src="http://aucdn.yoozi.net/assets/imgs/header/logo.png"></a></li>
+	  	  <li><a href="http://www.lanye.com.au/" rel="tooltip" title="澳洲城市生活指南"><img src="http://www.lanye.com.au/assets/images/header/logonew.png"></a></li>
+	  	</ul>
+	  </aside>
 	</div>
   </div> <!-- /container -->
 </div>
@@ -76,21 +97,86 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/idsclub.js"></script>
 <script type="text/javascript">
+/// The IDs Club bookshelf 
+/// http://github.com/IDs-Club/IDs-Web
+/// 
+///
+/// Authored by Saturn <yangg.hu@yoozi.org> from yoozi.com.au
+/// No Copyright, feel free to modify, redistribute and/or resell of this program.
+
+// Placeholder
+var bookshelf = $('#bookshelf');
+
+// Add a book to the bookshelf
+var addBook = function(book){
+	var $item = $("<li>").addClass("book span4 ");
+	var $link = $("<a>").attr("href", 'books.html?isdn=' + book.isbn10).appendTo($item);
+	$link.append($("<h2>").text(book.title));
+	$link.append($("<h3>").text(book.author));
+	$link.append($("<p>").html($("<img>").attr('src', book.img)));
+	$item.appendTo(bookshelf);
+};
+
+// Fetch all books
 var fetchAllBooks = function(uri){
 	$.getJSON(uri, function (books) {
-		var bookshelf = $('#bookshelf');
 		bookshelf.empty();
-		if (books.length > 0) {
+		var len = $.map(books, function(n, i) { return i; }).length;
+		if (len > 0) {
     		$.each(books, function (i, book) {
-            	var $img = $("<img>").attr("src", book.img);
-		        $img.appendTo(bookshelf);
+		        addBook(book);
           	});
       	} else {
-      		// todo
+      		bookshelf.html("<li style='list-style:none'>还未上架任何图书噢亲，考虑捐献一本闲置的技术书籍、造福人类？</li>");
       	}
 	});
 };
+
+// Fetch all categories for the bookshelf
+var fetchAllCats = function(uri) {
+	$.getJSON(uri, function (cats) {
+		var placeholder = $('#cats');
+		placeholder.empty();
+		var len = $.map(cats, function(n, i) { return i; }).length;
+		if (len > 0) {
+    		$.each(cats, function (i, cat) {
+		        var $item = $("<li>");
+		       	var $link = $("<a>")
+		       		.attr("href", 'javascript:updateBookshelf("' + cat.catid + '", "'+ cat.cat_name +'");').appendTo($item);
+		       	$link.append("<i class='icon-tag'></i> " + cat.cat_name);
+		       	$item.appendTo(placeholder);
+          	});
+      	} else {
+      		$("<li>没有任何类目喔亲。</li>").appendTo(placeholder);
+      	}
+	});
+};
+
+var updateBookshelf = function(catid, title) {
+	$('#title').html(title + "图书 <a href='bookshelf.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
+	bookshelf.html("<li style=\"list-style:none\"><img src=\"assets\/img\/spinner.gif\"> 正在用力的加载啊亲...请稍后</li>");
+	var uri = "http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getBooksByCategory&callback=?&catid=" + catid;
+	$.getJSON(uri, function (books) {
+		bookshelf.empty();
+		var len = $.map(books, function(n, i) { return i; }).length;
+		if (len > 0) {
+    		$.each(books, function (i, book) {
+		        addBook(book);
+          	});
+      	} else {
+      		bookshelf.html("<li style='list-style:none'>还没任何图书哟亲，考虑捐献一本闲置的技术书籍、造福人类？</li>");
+      	}
+	});
+}
+
+// Let's rock!
 fetchAllBooks('http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getAllBooks&callback=?');
+fetchAllCats('http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getCategories&callback=?');
+
+$('#thanks').tooltip({
+	selector: 'a[rel="tooltip"]',
+	placement: 'top'
+});
 </script>
 </body>
 </html>

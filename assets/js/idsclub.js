@@ -28,5 +28,10 @@ yoozi.app = yoozi.app || {};
 		selector: 'a[rel="tooltip"]',
 		placement: 'top'
 	});
+	// Tooltip on sponsers
+	$('#thanks').tooltip({
+		selector: 'a[rel="tooltip"]',
+		placement: 'top'
+	});
   });
 })();

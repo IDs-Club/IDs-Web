@@ -31,8 +31,12 @@ body {
   vertical-align: top;
 }
 hr {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+hr.bottom {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .btn-xlarge {
   width: 226px;
@@ -70,7 +74,7 @@ hr {
 }
 
 /** home */
-.home,.about,.contact,.github,.faq, .bookshelf {
+.home,.about,.contact,.github,.faq, .bookshelf,.books {
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -93,9 +97,8 @@ hr {
 .about h2 img {
   vertical-align: top;
 }
-.about hr, .faq hr, .contact hr {
-  margin-top: -8px;
-  margin-bottom: 10px;
+.about hr, .faq hr, .contact hr, .book hr {
+  
 }
 
 /** faq */
@@ -104,7 +107,7 @@ hr {
 }
 
 /** github */
-.github .header, li.repo, li.book {
+.github .header, li.repo, li.book, #cover {
   background: white;
   background: rgba(255, 255, 255, 0.7);
   -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -287,4 +290,25 @@ li.book:nth-child(3n+1) {
 }
 #thanks li {
   margin:10px 0;
+}
+/** book */
+#meta {
+  margin-top: 20px;
+}
+#cover p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+#cats {
+  margin-top: -10px;
+}
+#info {
+  font-size: 13px;
+}
+.pl {
+  font-size: 13px;
+  line-height: 150%;
+  color: #666;
 }

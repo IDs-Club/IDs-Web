@@ -72,7 +72,7 @@
     		<span class="pl">作者:</span> <span class="author"><img src="assets/img/spinner.gif"></span><br>
     		<span class="pl">出版时间:</span> <span class="pubdate"><img src="assets/img/spinner.gif"></span><br>
       		<span class="pl">ISBN:</span> <span class="isbn13"><img src="assets/img/spinner.gif"></span><br>
-      		<span class="pl">分类:</span> <span class="cat_name"><img src="assets/img/spinner.gif"></span><br>
+      		<span class="pl">分类:</span> <span class="cat_name"></span><br>
       		<span class="pl">馆藏数量:</span> <span class="stock" style="color:#f90;font-weight:bold"><img src="assets/img/spinner.gif"></span><br>
       		<a class="btn btn-primary" style="display:inline-block;margin-top:10px;" href="http://tflig.ht/Y79oDU"><i class="icon-download-alt"></i> 下载 App 借阅此书</a>
       		<a class="btn btn-info" style="display:inline-block;margin-top:10px;" href="bookshelf.html"><i class="icon-chevron-left"></i> 返回图书列表</a>
@@ -151,16 +151,24 @@ var fetchTheBook = function(uri, isbn){
 	$.getJSON(uri + isbn, function (book) {
 		var len = $.map(book, function(n, i) { return i; }).length;
 		if (len > 0) {
+			document.title = book.title;
     		$.each(book, function (key, val) {
+    			console.log(book);
     			if(key == 'img') {
 					$('#cover > p').empty();
     				$('<img>').attr('src', val).appendTo('#cover > p');
+    				return;
     			}
-    			else
-    				$('.' + key).html(val);
 
-    			if(key == 'title')
-    				document.title = val;
+				if(key == 'cat_name') {
+					var $link = $("<a>")
+		       			.attr("href", 'bookshelf.html?catid=' + book.catid + '&title=' + val)
+		       			.appendTo('.cat_name');
+		       		$link.append(val);
+		       		return;
+    			}
+
+    			$('.' + key).html(val);
           	});
       	} else {
       		window.location = 'bookshelf.html';

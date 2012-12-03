@@ -14,7 +14,10 @@
 
 ## 作者
 
-本网站程序由书友会成员[游子澳洲](http://www.yoozi.com.au)团队成员 [Saturn](https://github.com/cnsaturn) 设计、开发和维护。
+本网站程序由书友会成员[游子澳洲](http://www.yoozi.com.au)团队成员 [Saturn](https://github.com/cnsaturn)设计、开发和维护。
+
+* Via Github: [https://github.com/cnsaturn](https://github.com/cnsaturn)
+* Via Email: [yangg.hu@yoozi.org](yangg.hu@yoozi.org)
 
 ## 版权
 

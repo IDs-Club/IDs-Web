@@ -218,6 +218,19 @@ li.repo:nth-child(4n+1) {
   font-size: 240px;
   color: #006DCC;
 }
+#online-community {
+  list-style: none;
+  margin-left: 0;
+}
+#online-community .option {
+  padding-left: 20px;
+  text-align: center;
+}
+#online-community .qq-group {
+  color: #999;
+  font-size: 11px;
+  padding-top: 40px;
+}
 
 /** bookshelf */
 #bookshelf {

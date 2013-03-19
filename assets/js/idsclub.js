@@ -29,7 +29,7 @@ yoozi.app = yoozi.app || {};
 		placement: 'top'
 	});
 	// Tooltip on sponsers
-	$('#thanks').tooltip({
+	$('#thanks, .qq-group').tooltip({
 		selector: 'a[rel="tooltip"]',
 		placement: 'top'
 	});

@@ -13,7 +13,7 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-.home, .about, .faq, .contact, .bookshelf, .books,.github {
+.home, .about, .faq, .contact, .bookshelf, .books,.github, .events {
   margin-top: 60px;
 }
 .navbar .nav-pills {
@@ -79,7 +79,7 @@ hr.bottom {
 }
 
 /** home */
-.home,.about,.contact,.github,.faq, .bookshelf,.books {
+.home,.about,.contact,.github,.faq, .bookshelf,.books,.events {
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -332,6 +332,81 @@ li.book:nth-child(3n+1) {
   font-size: 13px;
   line-height: 150%;
   color: #666;
+}
+
+/** events */
+#rss-feed:before{
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 10px;
+  width: 3px;
+}
+#rss-feed:before, #rss-feed .posts:before, .posts > article:before{
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+#rss-feed, .posts, #search form{
+  position: relative;
+}
+#rss-feed .posts:before{
+  background-color: #CCCCCC;
+  border: 3px solid #FFFFFF;
+  border-radius: 100px 100px 100px 100px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+  height: 8px;
+  margin: 16px 0 0 0;
+  width: 8px;
+}
+.posts:hover > article, .posts:hover > article:before {
+  border-color: #CCCCCC;
+}
+#rss-feed .posts:hover:before {
+  background-color: #0088cc;
+}
+#rss-feed .posts{
+  overflow: hidden;
+  padding:0 0 50px 35px;
+  margin-left:-5px;
+}
+.posts > article:before {
+  -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #E5E5E5;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  height: 9px;
+  left: 30px;
+  top: 18px;
+  width: 9px;
+}
+.posts > article{
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 2px 2px 2px 2px;
+  padding: 20px;
+}
+header > h2{
+  margin:5px 0;
+}
+header > h2 a:hover{
+  -moz-transition:padding-left 0.8s;
+  -webkit-transition:padding-left 0.8s;
+  -o-transition:padding-left 0.8s;
+  transition:padding-left 0.8s;
+  padding-left: 30px;
+}
+
+#rss-feed img {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid #eee;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 2px;
 }
 
 @media (max-width: 979px) {

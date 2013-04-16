@@ -28,21 +28,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-150-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-150-precomposed.png">
 <noscript><meta http-equiv="refresh" content="0; url=http://classad.yoozi.com.au/noscript" /></noscript>
-
-<!-- Moot look and feel -->
-<link rel="stylesheet" href="http://cdn.moot.it/1.1/moot.css"/>
-<style>
-    .moot {
-        font-size: 18px;
-    }
-    .moot textarea {
-        background: #fefefe;
-    }
-    .moot .m-title {
-        font-size: 1em;
-        line-height: 2em;
-    }
-</style>
 </head>
 <body>
 
@@ -62,10 +47,10 @@
           <ul class="nav nav-pills pull-right">
             <li><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
             <li><a href="about.html" rel="tooltip" title="关于 IDs Club"><i class="icon-exclamation-sign"></i></a></li>
-            <li class="active"><a href="forums.html" rel="tooltip" title="群组讨论"><i class="icon-group"></i></a></li>
+            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="icon-group"></i></a></li>
             <li><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="icon-book"></i></a></li>
             <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="icon-github"></i></a></li>
-            <li><a href="events.html" rel="tooltip" title="活动"><i class="icon-bullhorn"></i></a></li>
+            <li class="active"><a href="events.html" rel="tooltip" title="活动"><i class="icon-bullhorn"></i></a></li>
             <li><a href="faq.html" rel="tooltip" title="问题"><i class="icon-question-sign"></i></a></li>
             <li><a href="contact.html" rel="tooltip" title="联系"><i class="icon-envelope"></i></a></li>
           </ul>
@@ -74,10 +59,10 @@
     </div>
   </div>
 
-  <div class="container about">
+  <div class="container events">
     <div class="row-fluid">
         <!-- (2) Placeholder for the forum. The forum will be rendered inside this element -->
-        <a class="moot" href="http://api.moot.it/idsclub"></a>
+        <div id="rss-feed"><img src="assets/img/spinner.gif"></span></div>
     </div>
   </div> <!-- /container -->
 </div>
@@ -95,19 +80,12 @@
   </div>
 </footer>
 
-<!--
- (2) Example tag for commenting, put it on a different page
- <a class="moot" href="http://api.moot.it/idsclub/blog#my-blog-entry"></a>
-
- (2) Example tag for threaded commenting
- <a class="moot" href="http://api.moot.it/idsclub/blog/my-large-blog-entry"></a>
-
- Moot paths are awesome: http://moot.it/docs/?idsclub?idsclub#path
--->
-
 <script src="assets/js/jquery-1.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/idsclub.js"></script>
-<script src="http://cdn.moot.it/1.1/moot.min.js"></script>
+<script src="assets/js/feed.js"></script>
+<script type="text/javascript">
+$('#rss-feed').FeedEk();
+</script>
 </body>
 </html>

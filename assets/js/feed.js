@@ -22,7 +22,7 @@
         var r = e(this).attr("id");
         var i;
         e.ajax({
-            url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=" + n.MaxCount + "&output=json&q=" + encodeURIComponent(n.FeedUrl) + "&hl=en&callback=?",
+            url: "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=" + n.MaxCount + "&output=json&ts=" +  new Date().getTime() + "&q=" + encodeURIComponent(n.FeedUrl) + "&hl=en&callback=?",
             dataType: "json",
             success: function (t) {
                 e("#" + r).empty();

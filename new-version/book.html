@@ -24,36 +24,38 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar container navbar-default navbar-fixed-top" role="navigation">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://www.idsclub.org/"><img width="30" height="30" src="assets/img/logo.png" alt=""/><b>澳洲互联网俱乐部</b></a>
-          </div>
+        <nav class="navbar navbar-default navbar-fixed-top sticky" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://www.idsclub.org/"><img width="30" height="30" src="assets/img/logo.png" alt=""/><b>澳洲互联网俱乐部</b></a>
+                </div>
         
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
-                <li><a href="events.html" rel="tooltip" title="最新活动"><i class="icon-flag-checkered"></i></a></li>
-                <li><a href="discuss.html" rel="tooltip" title="讨论组"><i class="icon-group"></i></a></li>
-                <li><a href="codes.html" rel="tooltip" title="代码资源"><i class="icon-github-alt"></i></a></li>
-                <li><a href="book.html" rel="tooltip" title="图书资源"><i class="icon-book"></i></a></li>
-                <li><a href="about.html" rel="tooltip" title="关于我们"><i class="icon-info-sign"></i></a></li>
-                <li><a href="faq.html" rel="tooltip" title="FAQ"><i class="icon-question-sign"></i></a></li>
-                <li><a href="contact.html" rel="tooltip" title="联系我们"><i class="icon-envelope-alt"></i></a></li>
-            </ul>
-          </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
+                        <li><a href="events.html" rel="tooltip" title="最新活动"><i class="icon-flag-checkered"></i></a></li>
+                        <li><a href="discuss.html" rel="tooltip" title="讨论组"><i class="icon-group"></i></a></li>
+                        <li><a href="codes.html" rel="tooltip" title="代码资源"><i class="icon-github-alt"></i></a></li>
+                        <li><a href="book.html" rel="tooltip" title="图书资源"><i class="icon-book"></i></a></li>
+                        <li><a href="about.html" rel="tooltip" title="关于我们"><i class="icon-info-sign"></i></a></li>
+                        <li><a href="faq.html" rel="tooltip" title="FAQ"><i class="icon-question-sign"></i></a></li>
+                        <li><a href="contact.html" rel="tooltip" title="联系我们"><i class="icon-envelope-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <article class="top-parallax">
             <section class="display">
-                <div class="slider-bg"></div>
+                <div class="slider-bg"><img src="assets/img/img_book.png"></div>
             </section>
             <section class="container">
                 <div class="row">
@@ -67,11 +69,11 @@
 
 <!-- event api-->
   <div class="container bookshelf">
-    <div class="row-fluid">
-      <div class="span9">
+    <div class="row">
+      <div class="col-md-9">
         <h2><i class="icon-book"></i> <span id="title">所有图书</span></h2>
         <hr />
-        <div class="row-fluid">
+        <div class="row">
           <ol id="bookshelf" class="clearfix">
             <li style="list-style:none">
               <img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后
@@ -79,7 +81,7 @@
           </ol>
         </div>
       </div>
-      <aside class="span3" id="category">
+      <aside class="col-md-3" id="category">
         <a class="btn btn-xlarge btn-primary" id="download" href="http://tflig.ht/Y79oDU"><i class="icon-download-alt"></i> 申请 App 测试版</a>
         <h3><i class="icon-filter"></i> 分类浏览</h3>
         <ul id="cats">
@@ -146,6 +148,95 @@
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/jquery.cslider.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
-        <script type="text/javascript">parallax(); large_navbar_change(); large_slider_top(); parallax_slider(); clients(); portfolio_effects();</script>
+        <script type="text/javascript" src="assets/js/idsclub.js"></script>
+        <script type="text/javascript">parallax(); large_slider_top(); parallax_slider(); clients(); portfolio_effects();</script>
+        <script type="text/javascript">
+            /// The IDs Club bookshelf 
+            /// http://github.com/IDs-Club/IDs-Web
+            /// 
+            ///
+            /// Authored by Saturn <yangg.hu@yoozi.org> from yoozi.com.au
+            /// No Copyright, feel free to modify, redistribute and/or resell of this program.
+
+            // Dirty global vars
+            var bookshelf = $('#bookshelf');
+            var catid = yoozi.app.qs('catid') || '',
+                title = yoozi.app.qs('title') || '';
+
+            // Add a book to the bookshelf
+            var addBook = function(book){
+                var $item = $("<li>").addClass("book span4 ");
+                var $link = $("<a>").attr("href", 'books.html?isbn=' + book.isbn10).appendTo($item);
+                $link.append($("<h2>").text(book.title));
+                $link.append($("<h3>").text(book.author));
+                $link.append($("<p>").html($("<img>").attr('src', book.img)));
+                $item.appendTo(bookshelf);
+            };
+
+            // Fetch all books
+            var fetchAllBooks = function(uri){
+                $.getJSON(uri, function (books) {
+                    bookshelf.empty();
+                    var len = $.map(books, function(n, i) { return i; }).length;
+                    if (len > 0) {
+                        $.each(books, function (i, book) {
+                            addBook(book);
+                        });
+                    } else {
+                        bookshelf.html("<li style='list-style:none'>还未上架任何图书噢亲，考虑捐献一本闲置的技术书籍、造福人类？</li>");
+                    }
+                });
+            };
+
+            // Fetch all categories for the bookshelf
+            var fetchAllCats = function(uri) {
+                $.getJSON(uri, function (cats) {
+                    var placeholder = $('#cats');
+                    placeholder.empty();
+                    var len = $.map(cats, function(n, i) { return i; }).length;
+                    if (len > 0) {
+                        $.each(cats, function (i, cat) {
+                            var $item = $("<li>");
+                            var $link = $("<a>")
+                                .attr("href", 'bookshelf.html?catid=' + cat.catid + '&title=' + cat.cat_name)
+                                .appendTo($item);
+                            $link.append("<i class='icon-tag'></i> " + cat.cat_name);
+                            $item.appendTo(placeholder);
+                        });
+                    } else {
+                        $("<li>没有任何类目喔亲。</li>").appendTo(placeholder);
+                    }
+                });
+            };
+
+            // Fetch books by category
+            var fetchBooksByCategory = function(uri, catid, title) {
+                $('#title').html(title + "图书 <a href='bookshelf.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
+                bookshelf.html("<li style=\"list-style:none\"><img src=\"assets\/img\/spinner.gif\"> 正在用力的加载啊亲...请稍后</li>");
+                $.getJSON(uri + catid, function (books) {
+                    bookshelf.empty();
+                    var len = $.map(books, function(n, i) { return i; }).length;
+                    if (len > 0) {
+                        $.each(books, function (i, book) {
+                            addBook(book);
+                        });
+                    } else {
+                        bookshelf.html("<li style='list-style:none'>还没任何图书哟亲，考虑捐献一本闲置的技术书籍、造福人类？</li>");
+                    }
+                });
+            }
+
+            // Let's rock!
+            fetchAllCats('http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getCategories&callback=?');
+
+            if(catid && title)
+              fetchBooksByCategory(
+                'http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getBooksByCategory&callback=?&catid=',
+                catid,
+                title
+              );
+            else
+              fetchAllBooks('http://api.idsclub.org/api/index.php?auth_token=fa41eade0f06e181360e0a0d1b387007&method=getAllBooks&callback=?');
+        </script>
     </body>
 </html>

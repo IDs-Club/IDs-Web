@@ -117,6 +117,14 @@ function medium_slider_top() {
     });
 }
 
+function slider_top() {
+    $(".slider-bg").backstretch([
+        "img/big/big-1.jpg", "img/big/big-2.jpg", "img/big/big-2.jpg", "img/big/big-4.jpg"
+    ], {
+        duration: 10000,
+        fade: 750
+    });
+}
 function parallax_slider() {
 
     $('#da-slider').cslider({

@@ -943,10 +943,11 @@ a.soft-hover { color: #fff; }
 /* Top Normal Size */
 .title { margin-top: 225px; }
 .display { height: 300px; }	
-.slider-bg { height: 300px; }
+.slider-bg { height: 300px; overflow: hidden;}
 .top { margin-top: 300px; }
 .doc { top: 350px; }
 .bookshelf {margin-top: 400px;}
+.slider-bg img{width: 100%;}
 
 /* Top Medium Size */
 .medium-title { margin-top: 397px; }

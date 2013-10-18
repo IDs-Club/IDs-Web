@@ -62,9 +62,9 @@
 <!-- event api-->
 <article class="large-doc">
         <!-- slide -->
-    <section class="display">
+    <section>
         <div class="container about">
-            <div class="row"><a class="moot" href="http://api.moot.it/idsclub"></a></div>
+            <div id="rss-feed" class="row"></div>
         </div> 
     </section>
 
@@ -138,5 +138,9 @@
         <script type="text/javascript" src="assets/js/script.js"></script>
         <script type="text/javascript" src="assets/js/idsclub.js"></script>
         <script type="text/javascript">parallax(); large_slider_top(); parallax_slider(); clients(); portfolio_effects();</script>
+        <script type="text/javascript" src="assets/js/feed.js"></script>
+        <script type="text/javascript">
+        $('#rss-feed').FeedEk();
+        </script>
     </body>
 </html>

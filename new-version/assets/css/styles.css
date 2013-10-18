@@ -994,7 +994,7 @@ a.soft-hover { color: #fff; }
 .top { margin-top: 300px; }
 .doc { top: 350px; }
 .bookshelf {margin-top: 400px;}
-.slider-bg img{width: 100%;}
+.slider-bg img{width: 100%;height: 300px;min-width: 700px;}
 
 /* Top Medium Size */
 .medium-title { margin-top: 397px; }

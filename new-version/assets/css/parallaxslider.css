@@ -57,7 +57,9 @@
 	height: 150px;
 	overflow: hidden;
 	font-family: 'Helvetica', sans-serif;
-	font-weight: 300; }
+	font-weight: 300; 
+	z-index:10000;
+}
 
 .da-slide .da-img {
 	text-align: center;

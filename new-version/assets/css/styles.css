@@ -621,7 +621,7 @@ a.soft-hover { color: #fff; }
 
 
 /** github */
-.github .header, li.repo, li.book, #cover {
+.github .header, li.repo, li.book .info, #cover {
   background: white;
   background: rgba(255, 255, 255, 0.7);
   -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -650,10 +650,77 @@ a.soft-hover { color: #fff; }
 
 /** bookshelf */
 #bookshelf {
-  margin-left: 0;
-  margin-top: 20px;
+	margin-left: 0;
+	margin-top: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
-
+li.book {
+    line-height: inherit;
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0;
+}
+li.book .info{
+	padding-bottom: 0;
+}
+li.book .info > a {
+    color: inherit;
+    display: block;
+    height: 225px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+li.book h2, li.book h3, li.book p {
+    margin: 10px 15px;
+}
+li.book h2, li.book h3 {
+	font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+li.book h2 {
+    font-size: 14px;
+    line-height: inherit;
+    margin-bottom: 2px;
+    max-width: 160px;
+    overflow: hidden;
+}
+li.book h3 {
+    color: #999999;
+    font-size: 11px;
+    line-height: inherit;
+    margin-bottom: 5px;
+    margin-top: -2px;
+}
+li.book p {
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+ul#thanks,ul#cats{
+	list-style-type: none;
+	padding-left: 10px;
+}
+#category h3 {
+    font-size: 16px;
+}
+#thanks li {
+    margin: 10px 0;
+}
+#cover{
+	padding-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#cover p {
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+}
 
 /** recently updated */
 #recently-updated-repos li {
@@ -1001,7 +1068,6 @@ a.soft-hover { color: #fff; }
 .slider-bg { height: 300px; overflow: hidden;}
 .top { margin-top: 300px; }
 .doc { top: 350px; }
-.bookshelf {margin-top: 400px;}
 .slider-bg img{width: 100%;height: 300px;min-width: 700px;}
 
 /* Top Medium Size */

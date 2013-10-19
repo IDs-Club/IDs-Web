@@ -31,7 +31,7 @@ yoozi.app = yoozi.app || {};
 	// Tooltip on sponsers
 	$('#thanks, .qq-group').tooltip({
 		selector: 'a[rel="tooltip"]',
-		placement: 'top'
+		placement: 'bottom'
 	});
   });
 })();

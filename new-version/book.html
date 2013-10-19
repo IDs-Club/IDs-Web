@@ -57,42 +57,41 @@
             <section class="display">
                 <div class="slider-bg"><img src="assets/img/img_book.png"></div>
             </section>
-            <section class="top"></section>
         </article>
 
-<!-- book api-->
-  <div class="container bookshelf">
-    <div class="row">
-      <div class="col-md-9">
-        <h2><i class="icon-book"></i> <span id="title">所有图书</span></h2>
-        <hr />
-        <div class="row">
-          <ol id="bookshelf" class="clearfix">
-            <li style="list-style:none">
-              <img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后
-            </li>
-          </ol>
-        </div>
-      </div>
-      <aside class="col-md-3" id="category">
-        <a class="btn btn-xlarge btn-primary" id="download" href="http://tflig.ht/Y79oDU"><i class="icon-download-alt"></i> 申请 App 测试版</a>
-        <h3><i class="icon-filter"></i> 分类浏览</h3>
-        <ul id="cats">
-          <li><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...</li>
-        </ul>
-        <h3><i class="icon-heart"></i> 感谢赞助商个人与单位</h3>
-        <ul id="thanks">
-          <li><a href="http://classad.yoozi.com.au/" rel="tooltip" title="澳洲游子租房、买车、交朋友和找工作"><img src="http://aucdn.yoozi.net/assets/imgs/header/logo.png"></a></li>
-          <li><a href="http://www.lanye.com.au/" rel="tooltip" title="澳洲城市生活指南"><img src="http://www.lanye.com.au/assets/images/header/logonew.png"></a></li>
-          <li><a href="http://www.creativebrand.cn/" rel="tooltip" title="凯瑞品牌"><img src="http://www.creativebrand.cn/templets/default/images/logo-trans2.png"></a></li>
-        </ul>
-        <h3><i class="icon-leaf"></i> 近期俱乐部活动</h3>
-        <iframe  src="http://www.eventbrite.com.au/calendar-widget?eid=4919208485" frameborder="0" height="686" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
-      </aside>
-    </div>
-  </div> <!-- /container -->
-</div>
-<!-- footer -->
+        <article class="large-doc">
+        <!-- book api-->
+          <div class="container bookshelf">
+            <div class="row">
+              <div class="col-md-9">
+                <h2><i class="icon-book"></i> <span id="title">所有图书</span></h2>
+                <hr />
+                <div class="row">
+                  <ol id="bookshelf" class="clearfix">
+                    <li style="list-style:none">
+                      <img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <aside class="col-md-3" id="category">
+                <a class="btn btn-xlarge btn-primary" id="download" href="http://tflig.ht/Y79oDU"><i class="icon-download-alt"></i> 申请 App 测试版</a>
+                <h3><i class="icon-filter"></i> 分类浏览</h3>
+                <ul id="cats">
+                  <li><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...</li>
+                </ul>
+                <h3><i class="icon-heart"></i> 感谢赞助商个人与单位</h3>
+                <ul id="thanks">
+                  <li><a href="http://classad.yoozi.com.au/" rel="tooltip" title="澳洲游子租房、买车、交朋友和找工作"><img src="http://aucdn.yoozi.net/assets/imgs/header/logo.png"></a></li>
+                  <li><a href="http://www.lanye.com.au/" rel="tooltip" title="澳洲城市生活指南"><img src="http://www.lanye.com.au/assets/images/header/logonew.png"></a></li>
+                  <li><a href="http://www.creativebrand.cn/" rel="tooltip" title="凯瑞品牌"><img src="http://www.creativebrand.cn/templets/default/images/logo-trans2.png"></a></li>
+                </ul>
+                <h3><i class="icon-leaf"></i> 近期俱乐部活动</h3>
+                <iframe  src="http://www.eventbrite.com.au/calendar-widget?eid=4919208485" frameborder="0" height="686" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
+              </aside>
+            </div>
+          </div>
+            <!-- footer -->
             <footer>
                 <section class="container">
                     <div class="row">
@@ -177,8 +176,9 @@
 
             // Add a book to the bookshelf
             var addBook = function(book){
-                var $item = $("<li>").addClass("book span4 ");
-                var $link = $("<a>").attr("href", 'books.html?isbn=' + book.isbn10).appendTo($item);
+                var $item = $("<li>").addClass("book col-sm-4 ");
+                var $info = $("<div class='info'>").appendTo($item);
+                var $link = $("<a>").attr("href", 'book_content.html?isbn=' + book.isbn10).appendTo($info);
                 $link.append($("<h2>").text(book.title));
                 $link.append($("<h3>").text(book.author));
                 $link.append($("<p>").html($("<img>").attr('src', book.img)));
@@ -210,7 +210,7 @@
                         $.each(cats, function (i, cat) {
                             var $item = $("<li>");
                             var $link = $("<a>")
-                                .attr("href", 'bookshelf.html?catid=' + cat.catid + '&title=' + cat.cat_name)
+                                .attr("href", 'book.html?catid=' + cat.catid + '&title=' + cat.cat_name)
                                 .appendTo($item);
                             $link.append("<i class='icon-tag'></i> " + cat.cat_name);
                             $item.appendTo(placeholder);
@@ -223,7 +223,7 @@
 
             // Fetch books by category
             var fetchBooksByCategory = function(uri, catid, title) {
-                $('#title').html(title + "图书 <a href='bookshelf.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
+                $('#title').html(title + "图书 <a href='book.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
                 bookshelf.html("<li style=\"list-style:none\"><img src=\"assets\/img\/spinner.gif\"> 正在用力的加载啊亲...请稍后</li>");
                 $.getJSON(uri + catid, function (books) {
                     bookshelf.empty();

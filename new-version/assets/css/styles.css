@@ -647,6 +647,14 @@ a.soft-hover { color: #fff; }
   line-height: 18px;
   font-size: 13px;
 }
+
+/** bookshelf */
+#bookshelf {
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+
 /** recently updated */
 #recently-updated-repos li {
   line-height: 1.5;

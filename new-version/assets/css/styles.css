@@ -1330,8 +1330,16 @@ footer p { font-size: 14px; color:#666; }
 
    
 @media (max-width: 767px) {
-body {
-	padding-left: 0px;
-	padding-right: 0px; }
-h2 { line-height: 1; }
-.doc-padding { padding: 0px; } }
+	body {
+		padding-left: 0px;
+		padding-right: 0px; }
+	h2 { line-height: 1; }
+	.doc-padding { padding: 0px; } 
+	nav .nav.navbar-nav {
+		margin-bottom: 0;
+	}
+	nav .nav.navbar-nav li{
+		display: inline-block;
+		position: static;
+	}
+}

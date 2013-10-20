@@ -59,7 +59,8 @@ hr{
 
 .navbar-default .navbar-brand { 
 	font-size: 26px;
-	color: #fff; }
+	color: #fff; 
+	text-align: top;}
 
 .navbar-default .navbar-toggle { border: 0; }
 
@@ -75,7 +76,6 @@ hr{
 	text-shadow: none;
 	font-weight: 200;
 	background: transparent;
-	text-align: top;
 	orange-title-left
 	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;

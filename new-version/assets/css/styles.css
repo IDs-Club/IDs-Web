@@ -58,7 +58,7 @@ hr{
 }
 
 .navbar-default .navbar-brand { 
-	font-size: 28px;
+	font-size: 26px;
 	color: #fff; }
 
 .navbar-default .navbar-toggle { border: 0; }
@@ -75,12 +75,14 @@ hr{
 	text-shadow: none;
 	font-weight: 200;
 	background: transparent;
+	text-align: top;
 	orange-title-left
 	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
 	-ms-transition: all .5s ease-in-out;
 	-o-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out; }
+	transition: all .5s ease-in-out; 
+}
 .navbar .navbar-nav .nav > li > a:hover {
 	color: #FFFFFF !important;
 	text-shadow: none; }

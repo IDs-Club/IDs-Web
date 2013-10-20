@@ -86,6 +86,9 @@ hr{
 .navbar .navbar-nav .nav > li > a:hover {
 	color: #FFFFFF !important;
 	text-shadow: none; }
+.navbar .navbar-brand img {
+    vertical-align: text-bottom;
+}
 
 @media (max-width: 979px) {
 .nav-collapse .nav > li > a, 
@@ -200,9 +203,6 @@ a.btn-navbar-icon {
 .btn.active,
 .btn[disabled],
 .btn.disabled {
-    color: #333333;
-    box-shadow: none;
-    background-color: transparent;
     -webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
@@ -348,10 +348,8 @@ a.btn-navbar-icon {
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary.disabled,
-.btn-primary[disabled] {
-    background: transparent;
-    border-color: #006dcc;
-    color: #006dcc !important; }
+.btn-primary[disabled] { 
+	border-color: #3276B1;}
 
 /* Btn Info */    
 .btn-info {
@@ -365,9 +363,8 @@ a.btn-navbar-icon {
 .btn-info.active,
 .btn-info.disabled,
 .btn-info[disabled] {
-	background: transparent;
     border-color: #49afcd;
-    color: #49afcd !important; }
+}
 
 /* Btn Danger */    
 .btn-danger {

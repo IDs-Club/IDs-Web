@@ -621,7 +621,7 @@ a.soft-hover { color: #fff; }
 
 
 /** github */
-.github .header, li.repo, li.book .info, #cover {
+.github .header, li.repo .info, li.book .info, #cover {
   background: white;
   background: rgba(255, 255, 255, 0.7);
   -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -634,11 +634,16 @@ a.soft-hover { color: #fff; }
   margin: 10px 15px 0;
   margin-top: 0;
 }
+.github .header{
+	height: 120px;
+}
 .github .header h3 {
-  margin-top: 15px;
+  padding-top: 10px;
+  line-height: 40px;
 }
 .github .header ol {
   list-style-type: none;
+  padding-left: 0;
 }
 .github .header h3 a {
   font-size: 14px;
@@ -646,6 +651,43 @@ a.soft-hover { color: #fff; }
 .github .header p, .github .header ol li {
   line-height: 18px;
   font-size: 13px;
+}
+ol#repos{
+	list-style-type: none;
+	padding-left: 0;
+}
+li.repo {
+	height: 220px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+li.repo .info{
+	margin-bottom: 0;
+  	padding-bottom: 0;
+}
+li.repo .info > a {
+    display: block;
+    height: 220px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+li.repo h2, li.repo h3, li.repo p {
+    margin: 15px 20px;
+}
+li.repo h2 {
+    font-size: 20px;
+    line-height: inherit;
+    margin-bottom: 2px;
+    max-width: 160px;
+    overflow: hidden;
+}
+li.repo h3 {
+    color: #999999;
+    font-size: 11px;
+    line-height: inherit;
+    margin-bottom: 15px;
+    margin-top: 2px;
 }
 
 /** bookshelf */

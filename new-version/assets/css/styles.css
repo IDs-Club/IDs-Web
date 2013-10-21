@@ -349,7 +349,8 @@ a.btn-navbar-icon {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] { 
-	border-color: #3276B1;}
+	background-color: #024a86;
+	border-color: #024a86;}
 
 /* Btn Info */    
 .btn-info {

@@ -8,11 +8,11 @@
 <meta name="description" content="IDs书友会是澳洲从事互联网行业的设计师，开发者，爱好者及苹果粉丝的俱乐部。我们在 2012 年发起线下聚会，接受所有公司，个人对 IT 及设计类书籍的捐赠。所有书籍，经整理后向同行们提供免费借阅，并定期举行聚会探讨。同时我们发起海外华人开源社区，希望更多俱乐部成员能一起参与开源项目。">
 <meta name="author" content="idsclub.org">
 <!-- Le styles -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 <link href="assets/css/idsclub.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/flexslider.css" />
 <!-- index Slide -->
 <link href="assets/css/carousel.css" rel="stylesheet">
 
@@ -36,23 +36,24 @@
 <noscript><meta http-equiv="refresh" content="0; url=http://classad.yoozi.com.au/noscript" /></noscript>
 </head>
 <body>
-<div class="container">
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="navbar-brand" href="/">
-        <img src="assets/img/logo.png" width="25" /> <b>澳洲互联网俱乐部</b>
-        </a>
-        <div class="collapse">
-          <ul class="navbar-nav nav-pills pull-right">
+        <div class="navbar-header">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="navbar-brand" href="/">
+            <img src="assets/img/logo.png" width="25" /> <b>澳洲互联网俱乐部</b>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.html" rel="tooltip" title="首页"><i class="fa fa-home"></i></a></li>
             <li><a href="about.html" rel="tooltip" title="关于 IDs Club"><i class="fa fa-info-circle"></i></a></li>
-            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="fa-users"></i></a></li>
+            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="fa fa-group"></i></a></li>
             <li><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="fa fa-book"></i></a></li>
             <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="fa fa-github"></i></a></li>
             <li><a href="events.html" rel="tooltip" title="活动"><i class="fa fa-bullhorn"></i></a></li>
@@ -66,192 +67,200 @@
 
    <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>发现创新价值的交流平台</h1>
-              <p>澳洲互联网设计师，开发者，爱好者及苹果粉丝的俱乐部</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">What The Fack?</a></p>
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>发现创新价值的交流平台</h1>
+                <p>澳洲互联网设计师，开发者，爱好者及苹果粉丝的俱乐部</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">What The Fack?</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>精彩活动回顾</h1>
+                <p>线下聚会，开源代码，图书资源，创业沙龙，中澳知识交流</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">瞧瞧精彩回顾</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>与您一路同行</h1>
+                <p>只要您在澳洲从事IT行业工作，且拥有一颗乐于分享的心</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">快来加入我们</a></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>精彩活动回顾</h1>
-              <p>线下聚会，开源代码，图书资源，创业沙龙，中澳知识交流</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">瞧瞧精彩回顾</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>与您一路同行</h1>
-              <p>只要您在澳洲从事IT行业工作，且拥有一颗乐于分享的心</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">快来加入我们</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
-    <hr>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div><!-- /.carousel -->
+      <hr>
+    </div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
 
     <!-- Events. -->
+    <div class="container ">
+      <div class="marketing">
+      <h2>最新活动  <small>new events</small></h2>
+          <small>千万不要错过的活动</small>
 
-    <div class="container marketing">
-    <h2>最新活动  <small>new events</small></h2>
-        <small>千万不要错过的活动</small>
-
-      <!-- Events -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-responsive" src="assets/img/events/event3.jpg" alt="Generic placeholder image">
-          <h3>Sep 2013</h3>
-          <p>IDs 书友er船上轰趴</p>
-          <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-responsive" src="assets/img/events/event2.jpg" alt="Generic placeholder image">
-          <h3>Augest 2013</h3>
-          <p>IDs悉尼线下活动</p>
-          <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-responsive" src="assets/img/events/event1.jpg" alt="Generic placeholder image">
-          <h3>July 2013</h3>
-          <p>IDs 书友会网友聚会</p>
-          <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-    <hr>
-<!-- media press start -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h2><i class="icon-bullhorn"></i>媒体报道<small> Media Press</small></h2>
-          <small>感谢支持着我们的媒体</small>
-        </div>
-        <div class="col-md-5">
-          <img class="img-responsive" src="assets/img/media/liangzhuo1.jpg">
-        </div>
-        <!-- Content panel in every span for padding -->
-        <div class="col-md-7">
-          <blockquote>
-            <p>从书友会到澳洲互联网俱乐部<p>
-            <small>互联网创业离不开创业环境，往大了说是大背景大风向，往小了说是互通有无的创业圈子。</small>
-          </blockquote>
-        <hr>
-          <p><a href="http://www.ifanr.com/359884">对于这一点，身处澳洲的梁卓深有体会。2010 年在 O2O概念很火的背景下，梁卓做了一个提供澳洲同城指南的“蓝页”，然而，这个项目的发展速度不及团队想象得快,它局限于本地市场，必须经过时间的沉淀......</a></p>
-          <p><a class="btn btn-sm btn-primary" href="#" role="button">了解更多</a></p>
+        <!-- Events -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="img-responsive" src="assets/img/events/event3.jpg" alt="Generic placeholder image">
+            <h3>Sep 2013</h3>
+            <p>IDs 书友er船上轰趴</p>
+            <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="img-responsive" src="assets/img/events/event2.jpg" alt="Generic placeholder image">
+            <h3>Augest 2013</h3>
+            <p>IDs悉尼线下活动</p>
+            <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="img-responsive" src="assets/img/events/event1.jpg" alt="Generic placeholder image">
+            <h3>July 2013</h3>
+            <p>IDs 书友会网友聚会</p>
+            <p><a class="btn btn-default" href="#" role="button">了解更多 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      <hr>
+  <!-- media press start -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2><i class="icon-bullhorn"></i>媒体报道<small> Media Press</small></h2>
+            <small>感谢支持着我们的媒体</small>
+          </div>
+          <div class="col-md-5">
+            <img class="img-responsive" src="assets/img/media/liangzhuo1.jpg">
+          </div>
+          <!-- Content panel in every span for padding -->
+          <div class="col-md-7">
+            <blockquote>
+              <p>从书友会到澳洲互联网俱乐部<p>
+              <small>互联网创业离不开创业环境，往大了说是大背景大风向，往小了说是互通有无的创业圈子。</small>
+            </blockquote>
+          <hr>
+            <p><a href="http://www.ifanr.com/359884">对于这一点，身处澳洲的梁卓深有体会。2010 年在 O2O概念很火的背景下，梁卓做了一个提供澳洲同城指南的“蓝页”，然而，这个项目的发展速度不及团队想象得快,它局限于本地市场，必须经过时间的沉淀......</a></p>
+            <p><a class="btn btn-sm btn-primary" href="#" role="button">了解更多</a></p>
+          </div>
         </div>
       </div>
     </div>
     <!-- media press end -->
-    <div class="container marketing">
-    <!-- partner start -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h2><i class="icon-thumbs-up-alt"></i>合作伙伴<small> Partner</small></h2>
-          <small>感谢支持我们的伙伴</small>
-            <!-- client list -->
-          <div class="flexslider">
-            <ul>
-                <li><img src="assets/img/clients/taobao.png" alt="淘宝" /></li>
-                <li><img src="assets/img/clients/weibo.png" alt="微博" /></li>
-                <li><img src="assets/img/clients/WEIXIN.png" alt="微信" /></li>
-                <li><img src="assets/img/clients/zoyus.png" alt="卓御科技" /></li>
-                <li><img src="assets/img/clients/lanye.png" alt="蓝页" /></li>
-                <li><img src="assets/img/clients/chinatelecom.png" alt="中国电信" /></li>
-                <li><img src="assets/img/clients/kairui.png" alt="凯瑞品牌" /></li>
-                <li><img src="assets/img/clients/VIC.png" alt="维州政府" /></li>
-                <li><img src="assets/img/clients/swinburne.png" alt="swinburne大学" /></li>
-                <li><img src="assets/img/clients/uom.png" alt="墨尔本大学" /></li>
-                <li><img src="assets/img/clients/ABF.png" alt="ABF" /></li>
-                <li><img src="assets/img/clients/gap.png" alt="GAP" /></li>
-            </ul>
+    <div class="container ">
+      <div class="marketing">
+      <!-- partner start -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2><i class="icon-thumbs-up-alt"></i>合作伙伴<small> Partner</small></h2>
+            <small>感谢支持我们的伙伴</small>
+            <div class="partner">
+              <!-- client list -->
+              <div class="flexslider">
+                <ul class="slides">
+                    <li class="grey-img"><img src="assets/img/clients/taobao.png" alt="淘宝" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/weibo.png" alt="微博" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/WEIXIN.png" alt="微信" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/zoyus.png" alt="卓御科技" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/lanye.png" alt="蓝页" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/chinatelecom.png" alt="中国电信" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/kairui.png" alt="凯瑞品牌" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/VIC.png" alt="维州政府" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/swinburne.png" alt="swinburne大学" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/uom.png" alt="墨尔本大学" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/ABF.png" alt="ABF" /></li>
+                    <li class="grey-img"><img src="assets/img/clients/gap.png" alt="GAP" /></li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-</div>
-<hr>
+    </div>
 
-<footer>
-    <div class="panel-footer">
-    <div class="col-lg-12">
-      <h3 class="panel-heading">加入我们</h3>
-        <p>只要您在澳洲从事IT行业工作，无论您是程序猿，果粉，设计狮还是攻城师，只要立足并致力于挨踢行业，且拥有一颗乐于分享的心</p>
-        <p><a class="btn btn-sm btn-primary" href="#" role="button" href="contact.html">快来加入我们。</a></p>
-    </div>
-    <div class="clearfix visible-xs"></div>
-    <div class="col-lg-6 pull-center">
-    <h3 class="panel-heading">加入方式</h3>
-      <div class="testimonals">
-        <p><i class="icon-caret-right"></i>用你宝贵的5分钟填写<a href="http://idsclub.wufoo.com/forms/aeaeaeae/" target="_blank">IDs Club 在线报名</a>表单</p>
-        <p><i class="icon-caret-right"></i>加入我们的 QQ 群：</p>
-        <p><a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=e64324ecb3474b6bb5852f7986a5c019647911b3c071989b1270317892594809" rel="tooltip" title="点击这里加入此群"><img border="0" src="http://wp.qq.com/images/group.png" alt="点击这里加入此群"></a><br />(ID:246879952)</p>
+  <footer>
+    <div class="container">
+      <div class="panel-footer">
+      <div class="col-lg-12">
+        <h3 class="panel-heading">加入我们</h3>
+          <p>只要您在澳洲从事IT行业工作，无论您是程序猿，果粉，设计狮还是攻城师，只要立足并致力于挨踢行业，且拥有一颗乐于分享的心</p>
+          <p><a class="btn btn-sm btn-primary" href="#" role="button" href="contact.html">快来加入我们。</a></p>
       </div>
-    </div>
-    <div class="clearfix visible-xs"></div>
+      <div class="clearfix visible-xs"></div>
+      <div class="col-lg-6 pull-center">
+      <h3 class="panel-heading">加入方式</h3>
+        <div class="testimonals">
+          <p><i class="icon-caret-right"></i>用你宝贵的5分钟填写<a href="http://idsclub.wufoo.com/forms/aeaeaeae/" target="_blank">IDs Club 在线报名</a>表单</p>
+          <p><i class="icon-caret-right"></i>加入我们的 QQ 群：</p>
+          <p><a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=e64324ecb3474b6bb5852f7986a5c019647911b3c071989b1270317892594809" rel="tooltip" title="点击这里加入此群"><img border="0" src="http://wp.qq.com/images/group.png" alt="点击这里加入此群"></a><br />(ID:246879952)</p>
+        </div>
+      </div>
+      <div class="clearfix visible-xs"></div>
       <div class="col-lg-6 pull-center">
         <h3 class="panel-heading">我们的微信群</h3>
-          <div class="controls">
-            <p>扫描二维码<br>关注IDs澳洲互联网俱乐部<br>微信(WeChat)公众账号</p>
+        <div class="controls">
+          <p>扫描二维码<br>关注IDs澳洲互联网俱乐部<br>微信(WeChat)公众账号</p>
           <img width="120" height="120" src="assets/img/qr-wechat.jpg" alt="微信二维码" />
+        </div>
+      </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="footer-content">
+                  <p><a href="https://github.com/ZOYU?tab=members" rel="tooltip" title="Our Team in Github">Made in Australia</a>  &copy; 2013 <a href="http://www.zoyu.com.au/">www.zoyu.com.au</a></p>
+              </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <ul class="footer-content">
+              <div id="social-profiles">
+                  <ul class="centerUl">
+                      <li><a><i class="fa fa-facebook icon-2x"></i></a></li>
+                      <li><a href="https://twitter.com/digitalcookers" target="_blank"><i class="fa fa-twitter icon-2x"></i></a></li>
+                      <li><a><i class="fa fa-linkedin icon-2x"></i></a></li>
+                      <li><a><i class="fa fa-google-plus icon-2x"></i></a></li>
+                      <li><a><i class="fa fa-youtube icon-2x"></i></a></li>
+                      <li><a><i class="fa fa-weibo icon-2x"></i></a></li>                  
+                  </ul>
+          </div>
+              </ul>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <div class="footer-content">
+                  <p></a>Idea for digitals · Creative Digital Consultancy</a></p>
+              </div>
+          </div>
       </div>
     </div>
-    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <div class="footer-content">
-                                <p><a href="https://github.com/ZOYU?tab=members" rel="tooltip" title="Our Team in Github">Made in Australia</a>  &copy; 2013 <a href="http://www.zoyu.com.au/">www.zoyu.com.au</a></p>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-xs"></div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <ul class="footer-content">
-                            <div id="social-profiles">
-                                <ul class="centerUl">
-                                    <li><a><i class="icon-facebook icon-2x"></i></a></li>
-                                    <li><a href="https://twitter.com/digitalcookers" target="_blank"><i class="icon-twitter icon-2x"></i></a></li>
-                                    <li><a><i class="icon-linkedin icon-2x"></i></a></li>
-                                    <li><a><i class="icon-google-plus icon-2x"></i></a></li>
-                                    <li><a><i class="icon-youtube icon-2x"></i></a></li>
-                                    <li><a><i class="icon-weibo icon-2x"></i></a></li>                  
-                                </ul>
-                        </div>
-                            </ul>
-                        </div>
-                        <div class="clearfix visible-xs"></div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            <div class="footer-content">
-                                <p></a>Idea for digitals · Creative Digital Consultancy</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-  <div class="container">
-    <div class="pull-left">
-      <a href="https://github.com/IDs-Club?tab=members" rel="tooltip" title="感谢游子Saturn">IDs精心制作</a> 
-      &copy; 2012 <a href="http://www.idsclub.org/">idsclub.org</a>
-    </div>
-    <div class="pull-right weibo">
-  	  <a href="http://weibo.com/idsclub"><img src="assets/img/weibo_16x16.png"> 我们在新浪微博</a>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="pull-left">
+        <a href="https://github.com/IDs-Club?tab=members" rel="tooltip" title="感谢游子Saturn">IDs精心制作</a> 
+        &copy; 2012 <a href="http://www.idsclub.org/">idsclub.org</a>
+      </div>
+      <div class="pull-right weibo">
+    	  <a href="http://weibo.com/idsclub"><img src="assets/img/weibo_16x16.png"> 我们在新浪微博</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -261,6 +270,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/idsclub.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -272,6 +282,8 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  clients();
 </script>
 </body>
 </html>

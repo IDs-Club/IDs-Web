@@ -29,6 +29,9 @@ body {
   font-weight: bold;
   color: #fff;
 }
+.navbar .navbar-brand{
+  padding: 12px;
+}
 .navbar .navbar-brand img {
   vertical-align: text-bottom;
 }
@@ -465,7 +468,27 @@ header > h2 a:hover{
 .partner li{list-style-type:none;}
 .partner p{color:#333; }
 
+<<<<<<< HEAD
 /* color*/
 .green{ 
   color: #0ca19a;
+=======
+@media (max-width: 767px) {
+  nav .nav.navbar-nav {
+    margin-bottom: 0;
+  }
+  .navbar .nav.navbar-nav li{
+    display: inline-block;
+    position: static;
+  }
+  .navbar-header .navbar-toggle{
+    padding: 0 6px;
+  }
+  .navbar-header .navbar-toggle .fa{
+    color:#CCCCCC
+  }
+  .navbar .nav > li > a {
+  padding:5px 10px;
+}
+>>>>>>> 29e8734f981a40961cd3dc68a3811488b823f3e9
 }

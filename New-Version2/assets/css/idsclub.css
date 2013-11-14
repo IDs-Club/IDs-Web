@@ -9,6 +9,17 @@ body {
   font: 14px/26px "Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","\5FAE\8F6F\96C5\9ED1",helvetica,Arial;
   color: #444;
 }
+body .btn{
+    background-image: none;
+}
+/* color*/
+.green{ 
+  color: #0ca19a;
+}
+
+.write{
+  color:#ffffff;
+}
 .container-fixed, .container {
   max-width: 960px;
   margin: 0 auto;
@@ -156,14 +167,14 @@ footer .footer-bottom{
   text-align:center;margin:auto auto 24px;margin-top:-22px
   }
 
-#social-profiles ul
-  .centerUl li  {float:left; 
+#social-profiles ul .centerUl li  {
+    float:left; 
     width: 30px;
     font-size: 19px;
-  ｝
+  }
   .centerUl li a i {
+    font-size: 25px;
     text-decoration:none; 
-    color: black;
     opacity: 0.5;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
 #social-profiles ul.centerUl li a:hover i{opacity: 1;}
 
@@ -194,7 +205,7 @@ footer .footer-bottom{
 }
 
 /** github */
-.github .header, li.repo, li.book, #cover {
+.github .header, li.repo .info, li.book .info, #cover {
   background: white;
   background: rgba(255, 255, 255, 0.7);
   -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -208,10 +219,12 @@ footer .footer-bottom{
   margin-top: 0;
 }
 .github .header h3 {
-  margin-top: 15px;
+  line-height: 40px;
+  padding-top: 10px;
 }
 .github .header ol {
   list-style-type: none;
+  padding-left: 0;
 }
 .github .header h3 a {
   font-size: 14px;
@@ -249,21 +262,24 @@ footer .footer-bottom{
   color: #999;
 }
 #repos {
-  margin-left: 0;
+  padding-left: 0;
 }
 
 li.repo {
-  height: 250px;
-  line-height: inherit;
+    height: 250px;
+    list-style: none;
+    margin-bottom: 20px;
 }
-
-li.repo > a {
-  display: block;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
+li.repo .info{
+  margin-bottom: 0;
+    padding-bottom: 0;
+}
+li.repo .info > a {
+    display: block;
+    height: 250px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
 }
 
 li.repo a:hover {
@@ -327,23 +343,28 @@ li.repo:nth-child(4n+1) {
 #bookshelf {
   margin-left: 0;
   margin-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 li.book {
-  line-height: inherit;
+    line-height: inherit;
+    list-style: none;
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+li.book .info{
   padding-bottom: 0;
-  margin-left: 0;
 }
-
-li.book > a {
-  display: block;
-  width: 100%;
-  height: 225px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
+li.book .info > a {
+    color: inherit;
+    display: block;
+    height: 225px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
 }
-
 li.book a:hover {
   background: #efefef;
   background: rgba(0, 0, 0, 0.05);
@@ -369,6 +390,7 @@ li.book h3 {
   line-height: inherit;
 }
 li.book h2, li.book h3 {
+  font-weight: bold;
   text-overflow:ellipsis;
   overflow: hidden;
   white-space:nowrap;
@@ -379,6 +401,14 @@ li.book p {
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
+}
+#book p.description{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+ul#thanks,ul#cats{
+  padding-left: 10px;
 }
 li.book:nth-child(3n+1) {
   margin-left: 0;
@@ -408,10 +438,6 @@ li.book:nth-child(3n+1) {
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
-}
-#cats li{
-  margin-top: -10px;
-  list-style-type: none;
 }
 #info {
   font-size: 13px;
@@ -518,14 +544,7 @@ header > h2 a:hover{
 .partner li{list-style-type:none;}
 .partner p{color:#333; }
 
-/* color*/
-.green{ 
-  color: #0ca19a;
-}
-
-.write{
-  color:#ffffff;
-}
+#myModal .modal-content{width:688px;}
 
 @media (max-width: 767px) {
   nav .nav.navbar-nav {
@@ -543,4 +562,5 @@ header > h2 a:hover{
   }
   .navbar .nav > li > a {
   padding:5px 10px;
+  }
 }

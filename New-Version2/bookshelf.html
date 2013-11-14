@@ -85,7 +85,7 @@
 	  	<ul id="cats">
 	  	  <li><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...</li>
 	  	</ul>
-	  	<h4><i class="fa fa-heart"></i> 感谢赞助商个人与单位</h4>
+	  	<h3><i class="fa fa-heart"></i> 感谢赞助商个人与单位</h3>
 	  	<ul id="thanks">
 	  	  <li><a href="http://classad.yoozi.com.au/" rel="tooltip" title="澳洲游子租房、买车、交朋友和找工作"><img src="http://aucdn.yoozi.net/assets/imgs/header/logo.png"></a></li>
 	  	  <li><a href="http://www.lanye.com.au/" rel="tooltip" title="澳洲城市生活指南"><img src="http://www.lanye.com.au/assets/images/header/logonew.png"></a></li>
@@ -129,8 +129,9 @@ var catid = yoozi.app.qs('catid') || '',
 
 // Add a book to the bookshelf
 var addBook = function(book){
-	var $item = $("<li>").addClass("book span4 ");
-	var $link = $("<a>").attr("href", 'books.html?isbn=' + book.isbn10).appendTo($item);
+	var $item = $("<li>").addClass("book col-sm-4 ");
+	var $info = $("<div class='info'>").appendTo($item);
+	var $link = $("<a>").attr("href", 'books.html?isbn=' + book.isbn10).appendTo($info);
 	$link.append($("<h2>").text(book.title));
 	$link.append($("<h3>").text(book.author));
 	$link.append($("<p>").html($("<img>").attr('src', book.img)));
@@ -164,7 +165,7 @@ var fetchAllCats = function(uri) {
 		       	var $link = $("<a>")
 		       		.attr("href", 'bookshelf.html?catid=' + cat.catid + '&title=' + cat.cat_name)
 		       		.appendTo($item);
-		       	$link.append("<i class='icon-tag'></i> " + cat.cat_name);
+		       	$link.append("<i class='fa fa-tag'></i> " + cat.cat_name);
 		       	$item.appendTo(placeholder);
           	});
       	} else {

@@ -67,23 +67,27 @@
 	  <h2><i class="fa fa-github-alt"></i> 澳洲互联网俱乐部开源项目</h2>
 	</div>
 	<div class="row">
-	  <div class="col-lg-4 header" id="statistics">
-	  	<h3>统计</h3>
-	  	<p>
-          <a href="https://github.com/IDs-Club/repositories">
-          	<span id="num-repos"><img src="assets/img/spinner.gif"></span> 个公开代码仓库
-          </a>
-          <br>
-          <a href="https://github.com/IDs-Club">
-          	<span id="num-members"><img src="assets/img/spinner.gif"></span> 位成员
-          </a>
-        </p>
-        <p class="email"><a href="mailto:opensource@idsclub.org">opensource@idsclub.org</a></p>
-	  </div>
-	  <div class="col-lg-8 header" id="recently-updated">
-          <h3>最近更新 <a href="https://github.com/IDs-Club/repositories">View All on GitHub</a></h3>
-          <ol id="recently-updated-repos"></ol>
-	  </div>
+    <div class="col-lg-4">
+  	  <div class="header" id="statistics">
+  	  	<h3>统计</h3>
+  	  	<p>
+            <a href="https://github.com/IDs-Club/repositories">
+            	<span id="num-repos"><img src="assets/img/spinner.gif"></span> 个公开代码仓库
+            </a>
+            <br>
+            <a href="https://github.com/IDs-Club">
+            	<span id="num-members"><img src="assets/img/spinner.gif"></span> 位成员
+            </a>
+          </p>
+          <p class="email"><a href="mailto:opensource@idsclub.org">opensource@idsclub.org</a></p>
+  	  </div>
+    </div>
+    <div class="col-lg-8">
+  	  <div class="header" id="recently-updated">
+        <h3>最近更新 <a href="https://github.com/IDs-Club/repositories">View All on GitHub</a></h3>
+        <ol id="recently-updated-repos"></ol>
+  	  </div>
+    </div>
 	</div>
 	<ol id="repos" class="row">
 	</ol>
@@ -147,8 +151,9 @@
   }
 
   function addRepo(repo) {
-    var $item = $("<li>").addClass("repo span3 " + (repo.language || '').toLowerCase());
-    var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
+    var $item = $("<li>").addClass("repo col-sm-3 " + (repo.language || '').toLowerCase());
+    var $info = $("<div class='info'>").appendTo($item);
+    var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($info);
     $link.append($("<h2>").text(repo.name));
     $link.append($("<h3>").text(repo.language));
     $link.append($("<p>").text(repoDescription(repo)));

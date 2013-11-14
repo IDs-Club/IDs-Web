@@ -77,12 +77,26 @@ footer .footer-bottom{
   font-size: 13px;
   color:#999;
   line-height: 24px;
+  text-align: center;
 }
 #footer a {
-  border-bottom: 1px dotted #aaa;
-  color:#999;
+  color:#eee;
   text-decoration: none;
 }
+#footer a:hover,
+#footer a:focus {
+  color: #00a29a;
+}
+
+.footer-bottom a {
+  color:#00a29a;
+  text-decoration: none;
+}
+.footer-bottom a:hover,
+.footer a:focus {
+  color: #005b56;
+}
+
 #footer .weibo a {
   border-bottom: none;
   font-weight: bold;
@@ -120,6 +134,39 @@ footer .footer-bottom{
   width: 150px;
   padding: 5px;
 }
+
+.line-divider:after{
+  background:url("../img/divider.png") no-repeat bottom center;
+  padding-bottom:12px;
+  display:block;
+  height:10px;
+  content:",";
+  text-indent:-9999px;
+  width:780px;
+  text-align:center;
+  margin:auto auto 24px;
+  }
+
+.line-divider-inline:after{
+  background:url("../img/divider_more_text.png") no-repeat bottom center;
+  padding-bottom:0;
+  display:block;
+  height:10px;content:",";
+  text-indent:-9999px;width:100%;
+  text-align:center;margin:auto auto 24px;margin-top:-22px
+  }
+
+#social-profiles ul
+  .centerUl li  {float:left; 
+    width: 30px;
+    font-size: 19px;
+  ｝
+  .centerUl li a i {
+    text-decoration:none; 
+    color: black;
+    opacity: 0.5;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+#social-profiles ul.centerUl li a:hover i{opacity: 1;}
+
 
 /* <a> partner */
 #grey-img{padding-bottom: 10px; background-color:#f2f2f2; overflow-x: hidden;}
@@ -349,7 +396,9 @@ li.book:nth-child(3n+1) {
 }
 #thanks li {
   margin:10px 0;
+  list-style-type: none;
 }
+
 /** book */
 #meta {
   margin-top: 20px;
@@ -360,8 +409,9 @@ li.book:nth-child(3n+1) {
   text-align: center;
   vertical-align: middle;
 }
-#cats {
+#cats li{
   margin-top: -10px;
+  list-style-type: none;
 }
 #info {
   font-size: 13px;
@@ -458,7 +508,7 @@ header > h2 a:hover{
 
 /** partner */
 .partner {
-  padding: 20px 0;
+  padding: 10px 0;
   min-height: 70px; 
 }
 .partner .flexslider{
@@ -468,11 +518,15 @@ header > h2 a:hover{
 .partner li{list-style-type:none;}
 .partner p{color:#333; }
 
-<<<<<<< HEAD
 /* color*/
 .green{ 
   color: #0ca19a;
-=======
+}
+
+.write{
+  color:#ffffff;
+}
+
 @media (max-width: 767px) {
   nav .nav.navbar-nav {
     margin-bottom: 0;
@@ -489,6 +543,4 @@ header > h2 a:hover{
   }
   .navbar .nav > li > a {
   padding:5px 10px;
-}
->>>>>>> 29e8734f981a40961cd3dc68a3811488b823f3e9
 }

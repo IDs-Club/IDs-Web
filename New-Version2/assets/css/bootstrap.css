@@ -680,7 +680,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   border-left: 5px solid #eeeeee;
-  background-color: #FFFFFF;
+
 }
 
 blockquote p {
@@ -5744,6 +5744,7 @@ a.list-group-item.active:focus .list-group-item-text {
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+
 }
 
 .panel-heading > .dropdown .dropdown-toggle {
@@ -6134,6 +6135,7 @@ button.close {
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: visible;
+  width: 100px;
 }
 
 .tooltip.in {
@@ -6610,6 +6612,9 @@ button.close {
 
 .pull-left {
   float: left !important;
+}
+.pull-center {
+  text-align: center !important;
 }
 
 .hide {

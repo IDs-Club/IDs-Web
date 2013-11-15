@@ -27,6 +27,9 @@ body .btn{
 .home, .about, .faq, .contact, .bookshelf, .books,.github, .events {
   margin-top: 60px;
 }
+.books{
+  padding-left: 0px;
+}
 .navbar .nav-pills {
   padding-top: 5px;
 }
@@ -42,6 +45,7 @@ body .btn{
 }
 .navbar .navbar-brand{
   padding: 12px;
+  padding-left:0px;
 }
 .navbar .navbar-brand img {
   vertical-align: text-bottom;
@@ -319,7 +323,7 @@ li.repo:nth-child(4n+1) {
   text-align: center;
 }
 #subscribe i.fa-envelope-o{
-  font-size: 240px;
+  font-size: 210px;
   color: #1bbc9b;
 }
 #online-community {
@@ -568,4 +572,7 @@ header > h2 a:hover{
   }
 }
 
-#mc_embed_signup .btn-lg.btn-primary{border:none;}
+#mc_embed_signup .btn-lg.btn-primary{
+  margin-top: 20px;
+  border:none;
+}

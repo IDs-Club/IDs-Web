@@ -27,9 +27,6 @@ body .btn{
 .home, .about, .faq, .contact, .bookshelf, .books,.github, .events {
   margin-top: 60px;
 }
-.books{
-  padding-left: 0px;
-}
 .navbar .nav-pills {
   padding-top: 5px;
 }
@@ -348,7 +345,7 @@ li.repo:nth-child(4n+1) {
 
 /** bookshelf */
 #bookshelf {
-  margin-left: 0;
+  margin-left: 8px;
   margin-top: 20px;
   padding-left: 0;
   padding-right: 0;
@@ -412,6 +409,10 @@ li.book p {
 #book p.description{
   margin-left: 0;
   margin-right: 0;
+}
+
+#book .mr0{
+  margin-left: 0;
 }
 
 ul#thanks,ul#cats{
@@ -570,6 +571,9 @@ header > h2 a:hover{
   .navbar .nav > li > a {
   padding:5px 10px;
   }
+  .navbar .navbar-brand {
+    padding-left: 12px;
+}
 }
 
 #mc_embed_signup .btn-lg.btn-primary{

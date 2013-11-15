@@ -318,9 +318,9 @@ li.repo:nth-child(4n+1) {
   margin-top: 70px;
   text-align: center;
 }
-#subscribe i.icon-envelope {
+#subscribe i.fa-envelope-o{
   font-size: 240px;
-  color: #006DCC;
+  color: #1bbc9b;
 }
 #online-community {
   list-style: none;

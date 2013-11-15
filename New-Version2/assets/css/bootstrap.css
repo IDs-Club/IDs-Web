@@ -2247,7 +2247,7 @@ textarea.input-lg {
   vertical-align: middle;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+
   border-radius: 4px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2330,8 +2330,8 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #1bbc9b;
+
 }
 
 .btn-primary:hover,
@@ -2340,8 +2340,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: #1bbc9b;
+
 }
 
 .btn-primary:active,
@@ -2365,8 +2365,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #018a83;
+
 }
 
 .btn-warning {

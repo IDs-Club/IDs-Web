@@ -76,13 +76,13 @@
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #2d6ca2;
+  background-color: #018a83;
   background-position: 0 -15px;
 }
 
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #2d6ca2;
+  background-color: #018a83;
   border-color: #2b669a;
 }
 

@@ -99,6 +99,9 @@ footer .footer-bottom{
   color: #00a29a;
 }
 
+.footer-title{
+  text-align: center;
+}
 .footer-bottom a {
   color:#00a29a;
   text-decoration: none;

@@ -14,11 +14,18 @@ body .btn{
 }
 /* color*/
 .green{ 
-  color: #0ca19a;
+  color: #00a29a;
 }
 
 .write{
   color:#ffffff;
+}
+.write a{
+  color: #fff;
+}
+.write a:hover, 
+.write a:focus{
+  color: #eee;
 }
 .container-fixed, .container {
   max-width: 960px;
@@ -73,12 +80,18 @@ hr.bottom {
   color:#FF9900;
 }
 
+small{
+  color: #999999;
+}
+
 /** footer */
 footer{
   background: #333333;
 }
 footer .footer-bottom{
+  font-size: 11px;
   background: #000000;
+  padding-top: 8px;
 }
 .centerUl li {
     display: inline;
@@ -86,10 +99,10 @@ footer .footer-bottom{
     text-align: center;
 }
 #footer {
-  font-size: 13px;
+  font-size: 12px;
   color:#999;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
 }
 #footer a {
   color:#eee;
@@ -101,7 +114,7 @@ footer .footer-bottom{
 }
 
 .footer-title{
-  text-align: center;
+  text-align: left;
 }
 .footer-bottom a {
   color:#00a29a;
@@ -112,14 +125,6 @@ footer .footer-bottom{
   color: #005b56;
 }
 
-#footer .weibo a {
-  border-bottom: none;
-  font-weight: bold;
-}
-#footer .weibo img {
-  vertical-align: top;
-  padding-top: 4px;
-}
 
 /** home */
 .home,.about,.contact,.github,.faq, .bookshelf,.books,.events {
@@ -157,7 +162,7 @@ footer .footer-bottom{
   height:10px;
   content:",";
   text-indent:-9999px;
-  width:780px;
+  width:100%;
   text-align:center;
   margin:auto auto 24px;
   }
@@ -179,7 +184,9 @@ footer .footer-bottom{
   .centerUl li a i {
     font-size: 25px;
     text-decoration:none; 
-    opacity: 0.5;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+    opacity: 0.5;-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;
+  }
+
 #social-profiles ul.centerUl li a:hover i{opacity: 1;}
 
 
@@ -316,7 +323,7 @@ li.repo:nth-child(4n+1) {
 
 /** contact */
 #subscribe {
-  margin-top: 70px;
+  margin-top: 10px;
   text-align: center;
 }
 #subscribe i.fa-envelope-o{

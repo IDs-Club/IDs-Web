@@ -34,8 +34,17 @@ body .btn{
 .home, .about, .faq, .contact, .bookshelf, .books,.github, .events {
   margin-top: 60px;
 }
+.navbar.navbar-inverse{
+  background-color: #333;
+  background-image: none;
+  border-color: #333;
+  min-height: 40px;
+}
 .navbar .nav-pills {
   padding-top: 5px;
+}
+.navbar .nav > li {
+  position: static;
 }
 .navbar .navbar-nav li i {
   font-size: 26px;
@@ -48,15 +57,20 @@ body .btn{
   color: #fff;
 }
 .navbar .navbar-brand{
-  padding: 12px;
-  padding-left:0px;
+  padding: 11px 12px 11px 0;
 }
 .navbar .navbar-brand img {
   vertical-align: text-bottom;
 }
+.navbar-nav.navbar-right li [class^="fa-"], li [class*=" fa-"] {
+    display: inline-block;
+    text-align: center;
+    width: 1.25em;
+}
 hr {
-  margin-top: -8px;
+  margin-top: 8px;
   margin-bottom: 10px;
+  color: #808080;
 }
 hr.bottom {
   margin-top: 0;
@@ -87,6 +101,12 @@ small{
 /** footer */
 footer{
   background: #333333;
+}
+footer .about-us{
+  position: static;
+}
+footer .about-us .item{
+  position: static;
 }
 footer .footer-bottom{
   font-size: 11px;
@@ -536,6 +556,12 @@ header > h2 a:hover{
   border-radius: 4px 4px 4px 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   padding: 2px;
+}
+
+#recent-event .news-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 @media (max-width: 979px) {

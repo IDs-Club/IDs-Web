@@ -243,7 +243,7 @@ var fetchAllCats = function(uri) {
 		       	var $link = $("<a>")
 		       		.attr("href", 'bookshelf.html?catid=' + cat.catid + '&title=' + cat.cat_name)
 		       		.appendTo($item);
-		       	$link.append("<i class='icon-tag'></i> " + cat.cat_name);
+		       	$link.append("<i class='fa fa-tag'></i> " + cat.cat_name);
 		       	$item.appendTo(placeholder);
           	});
       	} else {

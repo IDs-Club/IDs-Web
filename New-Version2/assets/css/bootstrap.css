@@ -6135,7 +6135,6 @@ button.close {
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: visible;
-  width: 100px;
 }
 
 .tooltip.in {

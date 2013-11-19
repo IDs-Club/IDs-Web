@@ -287,6 +287,7 @@
           dataType : 'json',
           success : function(data){
               if (data.status == 'ok') {
+                  return;
                   var html = '';
                   var len = $.map(data.news, function(n, i) { return i; }).length;
                   if (len > 0) {

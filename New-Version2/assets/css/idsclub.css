@@ -34,8 +34,17 @@ body .btn{
 .home, .about, .faq, .contact, .bookshelf, .books,.github, .events {
   margin-top: 60px;
 }
+.navbar.navbar-inverse{
+  background-color: #333;
+  background-image: none;
+  border-color: #333;
+  min-height: 40px;
+}
 .navbar .nav-pills {
   padding-top: 5px;
+}
+.navbar .nav > li {
+  position: static;
 }
 .navbar .navbar-nav li i {
   font-size: 26px;
@@ -48,16 +57,24 @@ body .btn{
   color: #fff;
 }
 .navbar .navbar-brand{
-  padding: 12px;
-  padding-left:0px;
+  padding: 11px 12px 11px 0;
 }
 .navbar .navbar-brand img {
   vertical-align: text-bottom;
 }
+.navbar-nav.navbar-right li [class^="fa-"], li [class*=" fa-"] {
+    display: inline-block;
+    text-align: center;
+    width: 1.25em;
+}
 hr {
-  margin-top: -8px;
+  margin-top: 8px;
   margin-bottom: 10px;
+<<<<<<< HEAD
   color:#333333;
+=======
+  color: #808080;
+>>>>>>> d32dc4334b1c59a3009f93f2488b26a53b79e324
 }
 hr.bottom {
   margin-top: 0;
@@ -81,6 +98,17 @@ hr.bottom {
   color:#FF9900;
 }
 
+.oldversion{
+  padding-left: 50px;
+}
+
+.oldversion a{
+  color: #999999;
+}
+
+.oldversion a:hover{
+  color: #666666；
+}
 small{
   color: #999999;
 }
@@ -88,6 +116,12 @@ small{
 /** footer */
 footer{
   background: #333333;
+}
+footer .about-us{
+  position: static;
+}
+footer .about-us .item{
+  position: static;
 }
 footer .footer-bottom{
   font-size: 11px;
@@ -114,6 +148,10 @@ footer .footer-bottom{
   color: #00a29a;
 }
 
+#footer a.btn-primary:hover{
+  color: #ccc;
+}
+
 .footer-title{
   text-align: left;
 }
@@ -126,7 +164,17 @@ footer .footer-bottom{
   color: #005b56;
 }
 
+.oldversion{
+  padding-left: 50px;
+}
 
+.oldversion a{
+  color: #999999;
+}
+
+.oldversion a:hover{
+  color: #666666；
+}
 /** home */
 .home,.about,.contact,.github,.faq, .bookshelf,.books,.events {
   padding-top: 25px;
@@ -539,6 +587,12 @@ header > h2 a:hover{
   padding: 2px;
 }
 
+#recent-event .news-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @media (max-width: 979px) {
 .nav-collapse .nav > li {
   float: left;
@@ -583,7 +637,6 @@ header > h2 a:hover{
     padding-left: 12px;
 }
 }
-
 #mc_embed_signup .btn-lg.btn-primary{
   margin-top: 20px;
   border:none;

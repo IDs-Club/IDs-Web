@@ -70,11 +70,7 @@ body .btn{
 hr {
   margin-top: 8px;
   margin-bottom: 10px;
-<<<<<<< HEAD
-  color:#333333;
-=======
-  color: #808080;
->>>>>>> d32dc4334b1c59a3009f93f2488b26a53b79e324
+  color: #333333;
 }
 hr.bottom {
   margin-top: 0;
@@ -109,6 +105,7 @@ hr.bottom {
 .oldversion a:hover{
   color: #666666；
 }
+
 small{
   color: #999999;
 }
@@ -147,11 +144,9 @@ footer .footer-bottom{
 #footer a:focus {
   color: #00a29a;
 }
-
 #footer a.btn-primary:hover{
   color: #ccc;
 }
-
 .footer-title{
   text-align: left;
 }
@@ -237,6 +232,28 @@ footer .footer-bottom{
   }
 
 #social-profiles ul.centerUl li a:hover i{opacity: 1;}
+
+#recent-event .event-img img{
+    margin: 0 auto;
+  }
+
+@media(min-width: 767px){
+  #recent-event .event-img{
+    border-radius: 4px;
+    border:1px solid #ccc;
+    padding: 2px;
+  }
+  #recent-event .event-img > div{
+    overflow: hidden;
+  }
+  #recent-event .event-img img{
+    height: 158px;
+  }
+  #recent-event .event-img img.resize{
+    width: auto;
+    max-width: none;
+  }
+}
 
 
 /* <a> partner */
@@ -598,7 +615,7 @@ header > h2 a:hover{
   float: left;
 }
 .home, .about, .faq, .contact, .bookshelf, .books,.github {
-  margin-top: 30;
+  margin-top: 30px;
 }
 }
 
@@ -637,6 +654,7 @@ header > h2 a:hover{
     padding-left: 12px;
 }
 }
+
 #mc_embed_signup .btn-lg.btn-primary{
   margin-top: 20px;
   border:none;

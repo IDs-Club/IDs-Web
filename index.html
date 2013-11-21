@@ -287,12 +287,15 @@
           dataType : 'json',
           success : function(data){
               if (data.status == 'ok') {
-                  return;
                   var html = '';
+                  var picSize='';
                   var len = $.map(data.news, function(n, i) { return i; }).length;
                   if (len > 0) {
                        $.each(data.news, function (i, news) {
-                          html +='<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><div style="min-height:158px;"><img class="img-responsive" src="'+ news.img_url +'" alt="Generic placeholder image"></div><h3>'+ news.pubDate +'</h3><p class="news-title">'+ news.title +'</p><p><a class="btn btn-default" target="_blank" href="'+ news.link +'" role="button">了解更多 &raquo;</a></p></div>';
+                        imgObj = new Image(); 
+                        imgObj.src = news.img_url.replace(/B400_600_400_75/, "B800_2400_800_150");
+                        if (imgObj.width/imgObj.height > 2) {picSize = 'resize'};
+                        html +='<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><div class="event-img"><div><img class="img-responsive '+ picSize +'"  src="'+ imgObj.src +'" alt="Generic placeholder image"></div></div><h3>'+ news.pubDate +'</h3><p class="news-title">'+ news.title +'</p><p><a class="btn btn-default" target="_blank" href="'+ news.link +'" role="button">了解更多 &raquo;</a></p></div>';
                       });
                       $('#recent-event').html(html);
                   }

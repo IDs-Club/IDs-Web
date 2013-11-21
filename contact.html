@@ -9,8 +9,12 @@
 <meta name="author" content="idsclub.org">
 <!-- Le styles -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 <link href="assets/css/idsclub.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/flexslider.css" />
+<!-- index Slide -->
+<link href="assets/css/carousel.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -30,97 +34,83 @@
 <noscript><meta http-equiv="refresh" content="0; url=http://classad.yoozi.com.au/noscript" /></noscript>
 </head>
 <body>
-<div class="container-fixed">
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-      	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/">
-          <img src="assets/img/logo.png" width="25" /> 澳洲互联网俱乐部
-        </a>
-        <div class="nav-collapse collapse">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="index.html" rel="tooltip" title="首页"><i class="icon-home"></i></a></li>
-            <li><a href="about.html" rel="tooltip" title="关于 IDs Club"><i class="icon-exclamation-sign"></i></a></li>
-            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="icon-group"></i></a></li>
-            <li><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="icon-book"></i></a></li>
-            <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="icon-github"></i></a></li>
-            <li><a href="events.html" rel="tooltip" title="活动"><i class="icon-bullhorn"></i></a></li>
-            <li><a href="faq.html" rel="tooltip" title="问题"><i class="icon-question-sign"></i></a></li>
-            <li class="active"><a href="contact.html" rel="tooltip" title="联系"><i class="icon-envelope"></i></a></li>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img src="assets/img/logo.png" width="25" /> <b>澳洲互联网俱乐部</b>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html" rel="tooltip" title="首页"><i class="fa fa-home"></i></a></li>
+            <li><a href="about.html" rel="tooltip" title="关于IDs"><i class="fa fa-info-circle"></i></a></li>
+            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="fa fa-group"></i></a></li>
+            <li><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="fa fa-book"></i></a></li>
+            <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="fa fa-github"></i></a></li>
+            <li><a href="events.html" rel="tooltip" title="最新活动"><i class="fa fa-flag-checkered"></i></a></li>
+            <li><a href="faq.html" rel="tooltip" title="常见问题"><i class="fa fa-question-circle"></i></a></li>
+            <li class="active"><a href="contact.html" rel="tooltip" title="联系我们"><i class="fa fa-envelope-o"></i></a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
   </div>
 
   <div class="container contact">
-	<div class="row-fluid">
-	  <div class="span9">
-		<h2><i class="icon-group"></i> 联系我们</h2>
+	<div class="row">
+    <!--/.contact info -->
+	  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+		<h2><i class="fa fa-group"></i> 联系我们<small> contact us</small></h2>
+		<small>目前我们IDs澳洲互联网俱乐部由首席打杂，文化打杂，神算打杂，外星打杂，极客打杂，爱心打杂，希望打杂，愤青打杂组成。</small>
 		<hr>
-		<p>目前基本常务打杂有以下几位童鞋：</p>
-		<ol>
+		<p><b>目前基本常务打杂有以下几位童鞋：</b></p>
+		<ul>
 			<li>
-				<strong>首席打杂：</strong> Zo ( <a href="mailto:me@zoliang.com">me@zoliang.com</a> )  <br> 
-				负责串场，活动组织，现场主持，放毒（比如会跟大家讲极限运动的好东西，建议你参与），拉皮条（邀请和安排演讲嘉宾）等等杂役。
-			</li>
-			<li>
-				<strong>愤青打杂：</strong>Aiyi ( <a href="mailto:aiyi.hack@gmail.com">aiyi.hack@gmail.com</a> )  <br> 
-				负责俱乐部技术支持，管理书籍的借阅和捐赠，负责给大家群发邮件通知，俱乐部活动签到流程
+				<strong>首席打杂：</strong> （<a href="mailto:hello@idsclub.org">hello@idsclub.org</a>）<br> 
+				负责串场, 活动组织，放毒（比如会跟大家讲极限运动的好东西，建议你参与），拉皮条（邀请和安排演讲嘉宾）等等杂役。
 			</li>
 			<li>
-				<strong>外星打杂：</strong>Dong （<a href="mailto:yd0116@gmail.com">yd0116@gmail.com</a>）<br>
-				负责组织开源代码，现场拍照和录像，负责给大家群发骚扰短信，俱乐部的Twitter负责
+				<strong>文化打杂：</strong> （<a href="mailto:member@idsclub.org">member@idsclub.org</a>）<br> 
+				负责管理会员资料，负责记录每次活动和会议的人员，签到，回顾，以及和学校学术和其他商务的合作机会洽谈。
 			</li>
 			<li>
-				<strong>爱心打杂：</strong>Amy ( <a href="mailto:amy.xu@zoyus.com.au">amy.xu@zoyus.com.au</a> )  <br>
-				负责现场接待，超级有爱的书友会美女， 负责接客（联系俱乐部成员）, 挨骂（觉得有什么地方不好，可以告诉我）
+				<strong>神算打杂：</strong> （<a href="mailto:finance@idsclub.org">finance@idsclub.org</a>）<br> 
+				负责编制财务计划，安排活动经费和预算，日常费用，以及建立和维护各赞助机构的关系。
 			</li>
 			<li>
-				<strong>希望打杂： </strong>Emily &amp;  Jeff ( <a href="mailto:jeff.xiong@gmail.com">jeff.xiong@gmail.com</a> )<br>
-				负责日常设计及现场拍照
+				<strong>外星打杂：</strong> （<a href="mailto:events@idsclub.org">events@idsclub.org</a>）<br> 
+				负责现场拍照和录像，负责给大家群发骚扰短信和邮件，以及俱乐部的微博及社交平台负责。
 			</li>
-		</ol>
-		<br />
-		<h2><i class="icon-qrcode"></i> 加入我们</h2>
-		<hr>
-		<p>只要您在澳洲从事IT行业工作，无论您是程序猿，果粉，设计狮还是攻城师，只要立足并致力于挨踢行业，且拥有一颗乐于分享的心，快来加入我们。</p>
-		<ol id="online-community">
-			<li><i class="icon-ok"></i>&nbsp;用你宝贵的 5 分钟填写 <a href="https://idsclub.wufoo.com/forms/ae-join-us//" target="_blank">IDsClub 在线报名</a>表单</li>
-			<li class="row-fluid clearfix">
-				<div class="span5">
-					<i class="icon-ok"></i>&nbsp;点击以下按钮，加入我们的 QQ 群
-				</div>
-				<div class="span2">
-					&nbsp;
-				</div>
-				<div class="span5">
-					<i class="icon-ok"></i>&nbsp;扫描二维码，加入微信（WeChat）群组
-				</div>
+			<li>
+				<strong>极客打杂：</strong> （<a href="mailto:geeks@idsclub.org">geeks@idsclub.org</a>）<br> 
+				负责俱乐部技术支持，组织开源代码，负责指导社区技术发展方向，以及相关活动建议。
 			</li>
-			<li class="row-fluid clearfix">
-				<div class="span5 option qq-group">
-<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=e64324ecb3474b6bb5852f7986a5c019647911b3c071989b1270317892594809" rel="tooltip" title="点击这里加入此群"><img border="0" src="http://wp.qq.com/images/group.png" alt="点击这里加入此群"></a><br />
-(ID:246879952)
-				</div>
-				<div class="span2">
-					&nbsp;
-				</div>
-				<div class="span5 option">
-					<img width="120" height="120" src="assets/img/qr-wechat.jpg" />
-				</div>
+			<li>
+				<strong>爱心打杂：</strong> （<a href="mailto:social@idsclub.org">social@idsclub.org</a>）<br> 
+				负责现场接待，现场主持, 超级有爱的俱乐部美女，负责接客(联系IDs成员), 挨骂 (觉得有什么地方不好，可以告诉我）
 			</li>
-		</ol>
+			<li>
+				<strong>希望打杂：</strong> （<a href="mailto:career@idsclub.org">career@idsclub.org</a>）<br> 
+				负责建设行业内里交流，搭建工作机会分享及应聘的信息平台，以及相关的应聘培训建议。
+			</li>
+			<li>
+				<strong>愤青打杂：</strong> （<a href="mailto:hello@idsclub.org">hello@idsclub.org</a>）<br> 
+				负责日常工作， 以及活动现场帮忙。
+		</ul>
+	<hr>
 	  </div>
-	  <div class="span3" id="subscribe">
-	  	<h1><i class="icon-envelope"></i></h1>
+  <!--contact info end -->
+  <!--subscribe -->
+	  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="subscribe">
+	  	<h1><i class="fa fa-envelope-o"></i></h1>
 	  	<!-- Begin MailChimp Signup Form -->
-		<div id="mc_embed_signup" style="margin-top:50px;">
+		<div id="mc_embed_signup">
 			<form action="http://idsclub.us6.list-manage.com/subscribe/post?u=4e789fac6d69abd5a8fd9cca3&amp;id=4d41e6d4ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			<input style="width:200px;" type="email" placeholder="请输入您的常用邮箱" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 			<div id="mce-responses" class="clear">
@@ -128,28 +118,103 @@
 				<div class="response" id="mce-success-response" style="display:none"></div>
 			</div>	
 			<div class="clear">
-				<button type="submit" class="btn btn-xlarge btn-primary" style="width:210px;font-size:20px;"><i class="icon-ok"></i> 订阅活动 </button>
+				<button type="submit" class="btn btn-lg btn-primary subscription" style="width:210px;font-size:20px;"><i class="fa fa-smile-o"></i> 订阅活动 
+				</button>
 			</div>
 			</form>
 		</div>
 		<!--End mc_embed_signup-->
 	  </div>
 	</div>
+<!--Subscribe end -->
+<!--Contact person -->
+    <h2><li class="fa fa-thumbs-o-up"></li> 常务打杂</h2>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <p><b>墨尔本</b></p>
+      <p>Zo, Dong, Aiyi, Peter, Amy, Lorena, Cheng, Ryan…</p>
+      <img src="assets/img/qr-wechat.jpg" width="120">
+      <small><br>加入墨尔本微信(WeChat)群组</small>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <p><b>悉尼</b></p>
+      <p>Simon, Sunny, Ken, Sean, Mike, Andrew, Elvis…</p>
+      <img src="assets/img/qr-wechat.jpg" width="120">
+      <small><br>加入悉尼微信(WeChat)群组</small>
+    </div>
   </div> <!-- /container -->
 </div>
+<!--Contact person end -->
+ <!-- footer -->
+  <footer>
+    <div id="footer" class="container">
+      <!-- footer one-->
+      <div class="col-lg-12">
+        <h3 class="line-divider write footer-title"> </h3>
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+        <h4>加入我们</h4>
+          <p>只要您在澳洲从事IT行业工作，无论您是程序猿，果粉，设计狮还是攻城师，只要立足并致力于挨踢行业，且拥有一颗乐于分享的心</p>
+          <p><a class="btn btn-sm btn-primary write" role="button" href="https://idsclub.wufoo.com/forms/z10wm6td0h9ya7n" data-toggle="modal" data-target="#myModal">快来加入我们</a></p>
+        </div>
+      <!-- footer two -->
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <h4>加入方式</h4>
+          <p><i class="fa fa-angle-double-right"></i>  <i class="icon-caret-right"></i>用你宝贵的5分钟填写<a href="https://idsclub.wufoo.com/forms/z10wm6td0h9ya7n" data-toggle="modal" data-target="#myModal">IDs Club 在线报名</a>表单</p>
+          <p><i class="fa fa-angle-double-right"></i>  <i class="icon-caret-right"></i>加入我们的 QQ 群：</p>
+          <p><a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=e64324ecb3474b6bb5852f7986a5c019647911b3c071989b1270317892594809" rel="tooltip" title="点击这里加入"><img border="0" src="http://wp.qq.com/images/group.png" alt="点击这里加入此群"></a><br /><small>(ID:246879952)</small></p>
+        </div>
+      <!-- client three -->
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <h4>我们的微信群</h4>
+          <p>关注IDs澳洲互联网俱乐部</p>
+          <img width="100" height="100" src="assets/img/qr-wechat.jpg" alt="微信二维码" /><br>
+          <p><small>微信(WeChat)公众账号</small></p>
+        </div>
+      </div>
 
-<hr class="bottom" />
-<footer id="footer">
-  <div class="container">
-    <div class="pull-left">
-      <a href="https://github.com/IDs-Club?tab=members" rel="tooltip" title="感谢游子Saturn">IDs精心制作</a> 
-      &copy; 2012 <a href="http://www.idsclub.org/">idsclub.org</a>
+    <!-- social icon-->
+    <div class="pull-center">
+        <div id="social-profiles">
+          <ul class="centerUl">
+            <li><a><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/digitalcookers" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a><i class="fa fa-linkedin"></i></a></li>
+            <li><a><i class="fa fa-google-plus"></i></a></li>
+            <li><a><i class="fa fa-youtube"></i></a></li>
+            <li><a><i class="fa fa-weibo"></i></a></li>                  
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="pull-right weibo">
-  	  <a href="http://weibo.com/idsclub"><img src="assets/img/weibo_16x16.png"> 我们在新浪微博</a>
+  <!-- footer bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="pull-left">
+        <p><a href="https://github.com/ZOYU?tab=members" rel="tooltip" title="Our Team in Github">Made in Australia</a>  &copy; 2013 <a href="http://www.zoyu.com.au/">www.zoyu.com.au</a><a class="oldversion" href="http://www.idsclub.org/oldversion">old Version</a></p>
+      </div>
+      <div class="pull-right weibo">
+        <p></a>Idea for digitals</a></p>
+      </div>
     </div>
   </div>
 </footer>
+ <!-- footer end-->
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">IDs Club 在线报名表</h4>
+      </div>
+      <div class="modal-body">
+        <iframe height="1063" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://idsclub.wufoo.com/embed/z10wm6td0h9ya7n/"><a href="https://idsclub.wufoo.com/forms/z10wm6td0h9ya7n/">Fill out my Wufoo form!</a></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script src="assets/js/jquery-1.7.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

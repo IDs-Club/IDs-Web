@@ -19,7 +19,7 @@ yoozi.app = yoozi.app || {};
    */
   $(document).ready(function () {
 	// Tooltip on navbar
-	$('.nav-pills li').tooltip({
+	$('.nav li').tooltip({
 		selector: 'a[rel="tooltip"]',
 		placement: 'bottom'
 	});

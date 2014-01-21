@@ -689,3 +689,17 @@ header > h2 a:hover{
   color: #999;
   background-color: #136962;
 }
+
+.btn-green {
+  color: #fff;
+  background-color: #1bbc9b;
+}
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #136962;
+}

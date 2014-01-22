@@ -239,7 +239,6 @@ footer .footer-bottom{
 @media(min-width: 767px){
   #recent-event .event-img{
     border-radius: 5px;
-    border:1px solid #ccc;
     padding: 5px;
     background-color: #FFF;
     height: 170px;

@@ -75,7 +75,7 @@
 	    <div class="row">
 	      <ol id="bookshelf" class="clearfix">
 		    <li style="list-style:none">
-		      <img src="assets/img/spinner.gif"> 正在用力的加载啊亲...请稍后
+		      <i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...请稍后
 		    </li>
  	      </ol>
 	    </div>
@@ -84,7 +84,7 @@
 	  	<a class="btn btn-lg btn-green" id="download" href="http://tflig.ht/Y79oDU"><i class="fa fa-cloud-download"></i> 申请 App 测试版</a>
 	  	<h4><i class="fa fa-filter"></i> 分类浏览</h4>
 	  	<ul id="cats">
-	  	  <li><img src="assets/img/spinner.gif"> 正在用力的加载啊亲...</li>
+	  	  <li><i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...</li>
 	  	</ul>
 	  	<h3><i class="fa fa-heart"></i> 感谢赞助商个人与单位</h3>
 	  	<ul id="thanks">
@@ -257,7 +257,7 @@ var fetchAllCats = function(uri) {
 // Fetch books by category
 var fetchBooksByCategory = function(uri, catid, title) {
 	$('#title').html(title + "图书 <a href='bookshelf.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
-	bookshelf.html("<li style=\"list-style:none\"><img src=\"assets\/img\/spinner.gif\"> 正在用力的加载啊亲...请稍后</li>");
+	bookshelf.html("<li style=\"list-style:none\"><i class=\"fa fa-spinner fa-spin\"></i> 正在用力的加载啊亲...请稍后</li>");
 	$.getJSON(uri + catid, function (books) {
 		bookshelf.empty();
 		var len = $.map(books, function(n, i) { return i; }).length;

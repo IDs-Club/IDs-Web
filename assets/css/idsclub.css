@@ -12,6 +12,9 @@ body {
 body .btn{
     background-image: none;
 }
+.mt40{
+  margin-top: 40px;
+}
 /* color*/
 .green{ 
   color: #00a29a;

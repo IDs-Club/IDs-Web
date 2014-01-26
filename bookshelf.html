@@ -75,7 +75,7 @@
 	    <div class="row">
 	      <ol id="bookshelf" class="clearfix">
 		    <li style="list-style:none">
-		      <i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...请稍后
+		      <i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...
 		    </li>
  	      </ol>
 	    </div>
@@ -257,7 +257,7 @@ var fetchAllCats = function(uri) {
 // Fetch books by category
 var fetchBooksByCategory = function(uri, catid, title) {
 	$('#title').html(title + "图书 <a href='bookshelf.html' style='font-size:12px;'><i class='icon-chevron-left'></i> 返回</a>");
-	bookshelf.html("<li style=\"list-style:none\"><i class=\"fa fa-spinner fa-spin\"></i> 正在用力的加载啊亲...请稍后</li>");
+	bookshelf.html("<li style=\"list-style:none\"><i class=\"fa fa-spinner fa-spin\"></i> 正在用力的加载啊亲...</li>");
 	$.getJSON(uri + catid, function (books) {
 		bookshelf.empty();
 		var len = $.map(books, function(n, i) { return i; }).length;

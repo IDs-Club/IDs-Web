@@ -91,7 +91,7 @@
     </div>
 	</div>
 	<ol id="repos" class="row">
-    <li class="col-xs-12" style="list-style:none"><i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...</li>
+    <li class="col-xs-12 loading" style="list-style:none"><i class="fa fa-spinner fa-spin"></i> 正在用力的加载啊亲...</li>
 	</ol>
   </div> <!-- /container -->
 </div>
@@ -232,7 +232,8 @@
       else {
         $(function () {
           $("#num-repos").text(repos.length);
-
+          $("#repos .loading").remove();
+          
           // Convert pushed_at to Date.
           $.each(repos, function (i, repo) {
             repo.pushed_at = new Date(repo.pushed_at);

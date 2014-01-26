@@ -154,7 +154,7 @@ function clients() {
         minItems: 1,
         maxItems: 8,
         controlNav: false,
-        directionNav: false
+        directionNav: true
     });
 }
 

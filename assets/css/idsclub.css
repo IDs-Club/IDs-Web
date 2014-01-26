@@ -265,7 +265,7 @@ footer .footer-bottom{
 #grey-img .intro{margin-bottom:1.5em;}
 #w-filter.row select.visible-xs{width:100%;}
 
-.grey-img {position:relative;overflow:hidden; margin-bottom: 1.5em;cursor:pointer;}
+.grey-img {position:relative;overflow:hidden; cursor:pointer;}
 .grey-img img{
     position: relative; top:0;-webkit-transition: top 0.3s ease-in-out;-moz-transition: top 0.3s ease-in-out;-o-transition: top 0.3s ease-in-out;transition: top 0.3s ease-in-out; 
     display:block;-webkit-filter: grayscale(100%);
@@ -631,9 +631,23 @@ header > h2 a:hover{
 .partner .flexslider{
   background: none;
   border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 35px;
+}
+.about .partner .flexslider{
+  margin-bottom: 15px;
 }
 .partner li{list-style-type:none;}
 .partner p{color:#333; }
+
+.partner .flex-direction-nav a:before{
+  font-size: 25px;
+}
+.partner .flex-direction-nav a {
+  margin: -14px 0 0;
+  height: 25px;
+}
 
 #myModal .modal-content{width:688px;}
 

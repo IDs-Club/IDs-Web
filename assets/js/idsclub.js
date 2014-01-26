@@ -24,7 +24,7 @@ yoozi.app = yoozi.app || {};
 		placement: 'bottom'
 	});
 	// Tooltip on footer links
-	$('#footer').tooltip({
+	$('.footer').tooltip({
 		selector: 'a[rel="tooltip"]',
 		placement: 'top'
 	});

@@ -132,21 +132,21 @@ footer .footer-bottom{
     display: inline;
     text-align: center;
 }
-#footer {
+.footer {
   font-size: 12px;
   color:#999;
   line-height: 24px;
   text-align: left;
 }
-#footer a {
+.footer a {
   color:#eee;
   text-decoration: none;
 }
-#footer a:hover,
-#footer a:focus {
+.footer a:hover,
+.footer a:focus {
   color: #00a29a;
 }
-#footer a.btn-primary:hover{
+.footer a.btn-primary:hover{
   color: #ccc;
 }
 .footer-title{

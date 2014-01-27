@@ -15,9 +15,18 @@ body .btn{
 .mt40{
   margin-top: 40px;
 }
+.mb40{
+  margin-bottom: 40px;
+}
+.mt20{
+  margin-top: 20px;
+}
 /* color*/
 .green{ 
   color: #00a29a;
+}
+.color-f398{
+  color: #f39800
 }
 
 .write{
@@ -70,6 +79,16 @@ body .btn{
     text-align: center;
     width: 1.25em;
 }
+.change-language {
+  float: left;
+  padding: 11px 12px 11px 0;
+  color: #999;
+}
+.change-language:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 8px;
   margin-bottom: 10px;
@@ -278,6 +297,22 @@ footer .footer-bottom{
 /** about */
 .about h2 img {
   vertical-align: top;
+}
+.about-en{
+  margin-top: 70px;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+.about-en .ids-logo img{
+  margin-top: 30px;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
+}
+.about-en .example-pic img{
+  margin: 0 auto;
+  display: block;
+  max-width: 315px;
 }
 
 /** faq */

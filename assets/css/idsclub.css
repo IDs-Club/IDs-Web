@@ -83,6 +83,7 @@ body .btn{
   float: left;
   padding: 11px 12px 11px 0;
   color: #999;
+  font-size: 12px;
 }
 .change-language:hover{
   color: #fff;

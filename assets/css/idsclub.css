@@ -687,6 +687,69 @@ header > h2 a:hover{
 
 #myModal .modal-content{width:688px;}
 
+/** made-in-aus */
+.company ul{
+  list-style: none outside none;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+.company ul li{
+  text-align: center;
+  line-height: 165px;
+  position: relative;
+  padding: 0;
+}
+.company .c-item{
+  border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+  border-image: none;
+  border-right: 1px solid #CCCCCC;
+  border-style: none solid solid;
+  border-width: 0 1px 1px;
+  display: block;
+  margin-left: -1px;
+  height: 230px;
+  padding: 25px 0;
+  position: relative;
+}
+.made-in .carousel{
+  margin-bottom: 0;
+}
+.made-in .view-mode a{
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.made-in .view-mode a:hover,.made-in .view-mode a.on{
+  background-color: #005b56;
+}
+.company .c-item img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.company .c-item:hover{
+  box-shadow: 0 0 8px #CCCCCC inset;
+}
+.hiring {
+  height: 76px;
+  position: absolute;
+  right: 1px;
+  top: -46px;
+  width: 76px;
+}
+
+@media (min-width: 992px) {
+  .company .c-item:nth-child(3n+1){
+    margin-left: 0;
+    border-right: none;
+  }
+}
+@media (max-width: 992px) {
+  .company .c-item{
+    border-right: none;
+  }
+}
+
 @media (max-width: 767px) {
   nav .nav.navbar-nav {
     margin-bottom: 0;
@@ -706,7 +769,7 @@ header > h2 a:hover{
   }
   .navbar .navbar-brand {
     padding-left: 12px;
-}
+  }
 }
 
 #mc_embed_signup .btn-lg.btn-primary{

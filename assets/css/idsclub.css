@@ -737,6 +737,21 @@ header > h2 a:hover{
   top: -46px;
   width: 76px;
 }
+.made-faq{
+  margin-top: 20px;
+}
+.made-faq ul,.made-faq-en ul{
+  list-style: none outside none;
+  padding-left: 0;
+} 
+.faq ul ol{
+  list-style: decimal inside none;
+  padding-left: 0;
+}
+.made-faq ul h3,.made-faq-en ul h3{
+  font-size: 20px;
+  margin-top: 20px;
+} 
 
 @media (min-width: 992px) {
   .company .c-item:nth-child(3n+1){

@@ -33,100 +33,38 @@
 <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-150-precomposed.png">
 <noscript><meta http-equiv="refresh" content="0; url=http://classad.yoozi.com.au/noscript" /></noscript>
 </head>
-<body>
+<body class="made-in">
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="fa fa-bars"></span>
-          </button>
           <a class="navbar-brand" href="/">
-            <img src="assets/img/logo.png" width="25" /> <b>澳洲互联网俱乐部</b>
+            <img src="assets/img/logo.png" width="25" /> <b>IDs澳洲互联网俱乐部 · 同伴圈</b>
           </a>
-          <a href="aboutus-en.html" class="change-language">English</a>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html" rel="tooltip" title="首页"><i class="fa fa-home"></i></a></li>
-            <li><a href="about.html" rel="tooltip" title="关于IDs"><i class="fa fa-info-circle"></i></a></li>
-            <li><a href="forums.html" rel="tooltip" title="群组讨论"><i class="fa fa-group"></i></a></li>
-            <li><a href="bookshelf.html" rel="tooltip" title="图书一览"><i class="fa fa-book"></i></a></li>
-            <li><a href="opensource.html" rel="tooltip" title="开源代码"><i class="fa fa-github"></i></a></li>
-            <li><a href="events.html" rel="tooltip" title="最新活动"><i class="fa fa-flag-checkered"></i></a></li>
-            <li><a href="faq.html" rel="tooltip" title="常见问题"><i class="fa fa-question-circle"></i></a></li>
-            <li><a href="contact.html" rel="tooltip" title="联系我们"><i class="fa fa-envelope-o"></i></a></li>
-          </ul>
-        </div><!--/.navbar-collapse -->
       </div>
     </div>
   </div>
 
+  <!-- carousel -->
+  <div id="myCarousel" class="carousel" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="">
+          <div class="carousel-caption">
+            <h1>澳洲互联网同伴圈</h1>
+            <p>由IDs澳洲互联网俱乐为您收集, 在澳洲用心做互联网产品的伙伴们</p>
+            <p><a class="btn btn-lg btn-primary" href="apply.html" role="button">加入我们</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.carousel end-->
+
   <!--made faq -->
-  <!-- 英文faq -->
-  <section class="container made-faq-en faq">
-    <h2><i class="fa fa-question-circle"></i> FAQ</h2>
-    <ul>
-      <li>
-        <h3>What do these companies have in common?</h3>
-        <ol>
-          <li>They are mostly coded in Australia</li>
-          <li>They have 5K+ people use or visit their site monthly</li>
-          <li>They display "Made in Australia" as prominently as its copyright and links to this page - <a href="http://idsclub.org/made-in-aus.html">http://idsclub.org/made-in-aus</a></li>
-        </ol>
-      </li>
-      <li>
-        <h3>How can we be added to the list?</h3>
-        If you meet criteria, <a href="javascript:;" data-toggle="modal" data-target="#apply-form-modal"><b>submit this form</b></a> and expect response in about a week.
-      </li>
-      <li>
-        <h3>What does "mostly coded in Australia" mean?</h3>
-        Over 50% of the front & backend code for the website or application was written in Australia
-      </li>
-      <li>
-        <h3>How do you verify that participants meet the "mostly coded in Australia" and "5K+ people" rules?</h3>
-        For now, honor system. Maybe later, verification TBD. Violations will be made public.
-      </li>
-      <li>
-        <h3>My company is based in Australia but our technology is mostly made (coded) elsewhere. Can we be listed?</h3>
-        No. Many great companies and projects are certainly being conceived and managed and funded in Australia, but that doesn’t mean they’re made in Australia. This is for internet that’s made in Australia.
-      </li>
-      <li>
-        <h3>Why the strict "mostly coded in Australia" rule?</h3>
-        Because tech is coded, so made means made. Made doesn’t mean funded or managed. Like a shirt that’s designed/licensed/funded in Australia, and made in China: It’s Made in China, not Made in Australia. Made means made.
-      </li>
-      <li>
-        <h3>Is there a “Made in Australia” logo that we can display?</h3>
-        We don’t have an official logo, but see "Adverb or verb? What kind of adverb or verb?" for what you should display on your site
-      </li>
-      <li>
-        <h3>Who's behind this?</h3>
-        This is a project of the <a href="index.html">Australia IDs Club</a>.
-      </li>
-      <li>
-        <h3>What's the point?</h3>
-        If Australia is to thrive in the 21st century, Australia needs to make more internet. Thankfully and excitingly, Australia is now (2013) finally making some of the best internet in the world (see list above). So let’s proudly show ourselves off in the hope that everyone everywhere (including software engineers who don’t live in the world’s greatest city) know what internet is made in Australia.
-      </li>
-      <li>
-        <h3>Adverb or verb? What kind of adverb or verb?</h3>
-        Here are some examples:
-        <ol>
-          <li>Foursquare says "Lovingly Made in New York"</li>
-          <li>Meetup.com says "Meetup is Proudly Made in NYC"</li>
-          <li>Aviary says "Hatched in NYC"</li>
-        </ol>
-      </li>
-      <li>
-        <h3>Where should I send suggestions for improving this page?</h3>
-        Send to <a href="mailto:ideas@idsclub.org">ideas@idsclub.org</a>
-      </li>
-    </ul>
-  </section>
-  <!-- 英文faq end-->
   <!-- 中文faq -->
-  <section class="container made-faq faq">
-    <h2><i class="fa fa-question-circle"></i> 常见问题</h2>
+  <section class="container made-faq">
+    <h2><i class="fa fa-question-circle"></i> 常见问题 <small>FAQ</small></h2>
     <ul>
       <li>
         <h3>这些伙伴们有什么共同之处？</h3>

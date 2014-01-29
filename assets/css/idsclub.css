@@ -688,6 +688,16 @@ header > h2 a:hover{
 #myModal .modal-content{width:688px;}
 
 /** made-in-aus */
+.made-in .company-list{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.company-list ol a{
+  color: #999;
+}
+.company-list ol a .green{
+  color: #00A29A;
+}
 .company ul{
   list-style: none outside none;
   overflow: hidden;
@@ -701,7 +711,7 @@ header > h2 a:hover{
   padding: 0;
 }
 .company .c-item{
-  border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+  border-color: #CCCCCC;
   border-image: none;
   border-right: 1px solid #CCCCCC;
   border-style: none solid solid;
@@ -714,6 +724,12 @@ header > h2 a:hover{
 }
 .made-in .carousel{
   margin-bottom: 0;
+}
+.made-in .carousel-caption{
+  padding-bottom: 0;
+}
+.made-in .view-mode{
+  margin-bottom: 5px;
 }
 .made-in .view-mode a{
   color: #fff;
@@ -737,18 +753,19 @@ header > h2 a:hover{
   top: -46px;
   width: 76px;
 }
-.made-faq{
-  margin-top: 20px;
+.made-in .made-faq{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-.made-faq ul,.made-faq-en ul{
+.made-faq ul{
   list-style: none outside none;
   padding-left: 0;
 } 
-.faq ul ol{
+.made-faq ul ol{
   list-style: decimal inside none;
   padding-left: 0;
 }
-.made-faq ul h3,.made-faq-en ul h3{
+.made-faq ul h3{
   font-size: 20px;
   margin-top: 20px;
 } 
@@ -784,6 +801,11 @@ header > h2 a:hover{
   }
   .navbar .navbar-brand {
     padding-left: 12px;
+    display:inline-block;
+    max-width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 

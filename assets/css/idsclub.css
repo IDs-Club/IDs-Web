@@ -695,7 +695,7 @@ header > h2 a:hover{
 .company-list ol a{
   color: #999;
 }
-.company-list ol a .green{
+.company-list ol a.green{
   color: #00A29A;
 }
 .company ul{
@@ -769,6 +769,11 @@ header > h2 a:hover{
   font-size: 20px;
   margin-top: 20px;
 } 
+#apply-form {
+  padding: 20px 10px;
+  border:1px dotted #ccc;
+  margin-bottom: 20px;
+}
 
 @media (min-width: 992px) {
   .company .c-item:nth-child(3n+1){

@@ -549,6 +549,9 @@ li.book:nth-child(3n+1) {
   margin:20px 0;
   list-style-type: none;
 }
+#thanks li img{
+  max-width: 133px;
+}
 
 /** book */
 #meta {

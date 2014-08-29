@@ -188,7 +188,7 @@ $(window).load(function(){
 	else if ( phone=="" ){ alert("phone number area is empty!"); $("#phone").focus(); }
 	else if ( type=="" ){ alert("register type isn't selected!"); $("#type").focus(); }
 	else {
-		$.post("contact.send.php", { name:name, email:email, phone:phone, type:type }, function( result ){
+		$.post("http://api.idsclub.org/api/2014ids-conference/contact.send.php", { name:name, email:email, phone:phone, type:type }, function( result ){
 			if ( result=="SUCCESS" ){
 				alert("Your contact form is sent.");
 				setTimeout(function(){
@@ -213,7 +213,7 @@ $(window).load(function(){
 		var email 	= $("#newsletter_email").val();
 		if ( email=="" ){ alert("Your email address is empty!"); $("#newsletter_email").focus(); }
 		else {
-			$.post("newsletter.send.php", { email:email }, function( result ){
+			$.post("http://api.idsclub.org/api/2014ids-conference/newsletter.send.php", { email:email }, function( result ){
 				
 				console.log( result );
 				

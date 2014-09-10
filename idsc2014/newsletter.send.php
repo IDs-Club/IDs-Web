@@ -4,7 +4,7 @@
 
 	$send_name      = "Ideas of Digital Conference (IDSC) 2014";		// Replace your name
 	$send_title     = "IDSC 2014 Subscribe Form";		// Replace email sent title
-	$send_address   = "name@domain.com";	// Replace your email address
+	$send_address   = "idsc@idsclub.org";	// Replace your email address
 	
 	$smtp_address   = "mail@domain";		// Replace your email address
 	$smtp_password	= "123456";				// Replace your email password

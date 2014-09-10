@@ -449,7 +449,7 @@ h4 {
 }
 
 .venue {
-	background:url(../img/venue-bg.png) bottom center no-repeat;
+	background:url(../img/venue-bg.jpg) bottom center no-repeat;
 	width:100%;
 	height:auto;
 	min-height:540px;
@@ -493,7 +493,7 @@ h4 {
 /* TESTIMONIAL */
 
 #testimonial {
-	background:url(../img/testimonial-bg.png) bottom center no-repeat fixed;
+	background:url(../img/testimonial-bg.jpg) bottom center no-repeat fixed;
 	width:100%;
 	height:auto;
 	min-height:225px;
@@ -548,7 +548,7 @@ h4 {
 /* SUBSCRIBE */
 
 #subscribe {
-	background:url(../img/subscribe-bg.png) bottom center no-repeat fixed;
+	background:url(../img/subscribe-bg.jpg) bottom center no-repeat fixed;
 	padding:50px 0;
 	background-size:cover;
 	-webkit-background-size:cover;

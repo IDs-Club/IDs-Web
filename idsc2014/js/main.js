@@ -253,7 +253,7 @@ $(window).load(function(){
         position: new google.maps.LatLng(-37.868440, 144.988665) //change the coordinates Melbourne town hall
     });
     infowindow = new google.maps.InfoWindow({
-        content: "<b>St Kilda Town Hall </b><br/>99A Carlisle Street, St Kilda, Melbourne CBD "  //add your address
+        content: "<b>St Kilda Town Hall </b><br/>99A Carlisle Street, St Kilda "  //add your address
     });
     google.maps.event.addListener(marker, "click", function () {
         infowindow.open(map, marker);

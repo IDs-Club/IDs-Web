@@ -242,7 +242,7 @@ $(window).load(function(){
 	function init_map() {
     var myOptions = {
         zoom: 14,
-        center: new google.maps.LatLng(-37.868440, 144.988665), //change the coordinates Melbourne town hall
+        center: new google.maps.LatLng(-37.868440, 144.988665), //change the coordinates St Kilda Town Hall
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 		scrollwheel: false,
 		styles: [{featureType:'all',stylers:[{saturation:-100},{gamma:0.50}]}]
@@ -250,10 +250,11 @@ $(window).load(function(){
     map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
     marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(-37.868440, 144.988665) //change the coordinates Melbourne town hall
+        position: new google.maps.LatLng(-37.868440, 144.988665) //change the coordinates St Kilda Town Hall
     });
     infowindow = new google.maps.InfoWindow({
-        content: "<b>St Kilda Town Hall </b><br/>99A Carlisle Street, St Kilda "  //add your address
+        content: "St Kilda Town Hall<br/><b>99A Carlisle Street</b><br/>" 
+		 //add your address
     });
     google.maps.event.addListener(marker, "click", function () {
         infowindow.open(map, marker);

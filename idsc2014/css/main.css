@@ -161,7 +161,7 @@ h4 {
 /* TOP */
 
 #top {
-	background:url(../img/top-bg-1920.jpg) bottom center no-repeat;/*06-conference-075.jpg*/
+	background:url(../img/06-conference-075.jpg) bottom center no-repeat;/*06-conference-075.jpg*/
 	width:100%;
 	max-height:auto;
 	height:600px;
@@ -607,7 +607,7 @@ h4 {
 
 #register {
 	padding:70px 0;
-	background:url(../img/top-bg-1920.jpg) center center no-repeat fixed;/*register-bg.png*/
+	background:url(../img/06-conference-075.jpg) center center no-repeat fixed;/*register-bg.png*/
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;

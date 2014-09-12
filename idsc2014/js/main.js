@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date(); 
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
-    $('#countdown').countdown({until: new Date(2014, 11-1, 20)}); // enter event day  19th November 2014
+    $('#countdown').countdown({until: new Date(2014, 11-1, 19)}); // enter event day  18th November 2014
     
     $('#removeCountdown').toggle(
         function() {
@@ -242,7 +242,7 @@ $(window).load(function(){
 	function init_map() {
     var myOptions = {
         zoom: 14,
-        center: new google.maps.LatLng(-37.814821, 144.966326), //change the coordinates Melbourne town hall
+        center: new google.maps.LatLng(-37.868440, 144.988665), //change the coordinates Melbourne town hall
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 		scrollwheel: false,
 		styles: [{featureType:'all',stylers:[{saturation:-100},{gamma:0.50}]}]
@@ -250,10 +250,10 @@ $(window).load(function(){
     map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
     marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(-37.814821, 144.966326) //change the coordinates Melbourne town hall
+        position: new google.maps.LatLng(-37.868440, 144.988665) //change the coordinates Melbourne town hall
     });
     infowindow = new google.maps.InfoWindow({
-        content: "<b>Melourne Town Hall </b><br/> 90-120 Swanston Street, Melbourne CBD "  //add your address
+        content: "<b>St Kilda Town Hall </b><br/>99A Carlisle Street, St Kilda, Melbourne CBD "  //add your address
     });
     google.maps.event.addListener(marker, "click", function () {
         infowindow.open(map, marker);

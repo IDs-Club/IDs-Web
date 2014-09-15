@@ -211,30 +211,10 @@ $(window).load(function(){
 		'use strict';
 		
 		var email 	= $("#newsletter_email").val();
-		if ( email=="" ){ alert("Your email address is empty!"); $("#newsletter_email").focus(); }
-		else {
-			$.post("http://api.idsclub.org/api/2014ids-conference/newsletter.send.php", { email:email }, function( result ){
-				
-				console.log( result );
-				
-				if ( result=="SUCCESS" ){
-					alert("Thank you. Your email is added to our database.");
-					setTimeout(function(){ $("#newsletter_email").val(""); }, 3000);
-				}
-				
-				else if ( result=="EXIST" ){
-					alert("Error. Your email address is already exist our database.");
-					$("#newsletter_email").focus();
-				}
-				
-				else {
-					alert("Error. Your email isn't added to our database.");
-					$("#newsletter_email").focus();
-				}
-				
-			});
-		}
-	
+		if ( email=="" ){ 
+			alert("Your email address is empty!"); $("#newsletter_email").focus(); 
+			return false;
+		}	
 	};
 	
 

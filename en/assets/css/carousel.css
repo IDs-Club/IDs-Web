@@ -36,7 +36,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 300px;
+  height: 455px;
   margin-bottom: 20px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -46,7 +46,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 300px;
+  height: 455px;
   background-color: #00a29a;
 }
 .carousel-inner > .item > img {
@@ -54,7 +54,7 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 300px;
+  height: 455px;
 }
 
 
@@ -128,7 +128,7 @@ body {
 
   /* Bump up size of carousel content */
   .carousel-caption p {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     font-size: 21px;
     line-height: 1.4;
   }

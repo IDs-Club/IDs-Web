@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date(); 
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
-    $('#countdown').countdown({until: new Date(2014, 11-1, 19)}); // enter event day  18th November 2014
+    $('#countdown').countdown({until: new Date(2014, 11-1, 21)}); // enter event day  21st November 2014
     
     $('#removeCountdown').toggle(
         function() {
@@ -222,7 +222,7 @@ $(window).load(function(){
 	function init_map() {
     var myOptions = {
         zoom: 14,
-        center: new google.maps.LatLng(-37.868440, 144.988665), //change the coordinates St Kilda Town Hall
+        center: new google.maps.LatLng(-37.809704, 144.966059), //change the coordinates St Kilda Town Hall
         mapTypeId: google.maps.MapTypeId.ROADMAP,
 		scrollwheel: false,
 		styles: [{featureType:'all',stylers:[{saturation:-100},{gamma:0.50}]}]
@@ -230,10 +230,10 @@ $(window).load(function(){
     map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
     marker = new google.maps.Marker({
         map: map,
-        position: new google.maps.LatLng(-37.868440, 144.988665) //change the coordinates St Kilda Town Hall
+        position: new google.maps.LatLng(-37.809704, 144.966059) //change the coordinates St Kilda Town Hall
     });
     infowindow = new google.maps.InfoWindow({
-        content: "St Kilda Town Hall<br/><b>99A Carlisle Street</b><br/>" 
+        content: "The Courtyard, State Library of Victoria<br/><b>328 Swanston Street, Melbourne</b><br/>" 
 		 //add your address
     });
     google.maps.event.addListener(marker, "click", function () {

@@ -175,8 +175,12 @@ h4 {
 
 #top h1 {
 	font-family:'Economica';
-	font-size:60px;
-	margin-top:2em;
+	font-size:40px;  /*60px*/
+	margin-top:0.5em; /*2em*/
+	color:#fff;
+	padding:20px 0;
+	background:#000;
+	opacity:0.8;
 }
 
 /* Countdown */
@@ -601,6 +605,8 @@ h4 {
 
 .mt10{margin-top:10px;}
 .mt50{margin-top:50px;}
+.mt80{margin-top:80px;}
+.mt100{margin-top:100px;}
 .font-white{color:#fff;}
 .unl{text-decoration:underline;}
 .font1em{font-size:1em;}
